@@ -1,0 +1,49 @@
+INFO: [HLS 200-10] Running '/tool/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'yhp' on host 'yhp' (Linux_x86_64 version 5.15.0-48-generic) on Fri Oct 14 12:53:16 CST 2022
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4'
+Sourcing Tcl script '/home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4/axi_interfaces_prj/solution2/export.tcl'
+INFO: [HLS 200-1510] Running: source /home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4/axi_interfaces_prj/solution2/export.tcl
+INFO: [HLS 200-1510] Running: open_project axi_interfaces_prj 
+INFO: [HLS 200-10] Opening project '/home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4/axi_interfaces_prj'.
+INFO: [HLS 200-1510] Running: set_top axi_interfaces 
+INFO: [HLS 200-1510] Running: add_files axi_interfaces.c 
+INFO: [HLS 200-10] Adding design file 'axi_interfaces.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb result.golden.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'result.golden.dat' to the project
+INFO: [HLS 200-1510] Running: add_files -tb axi_interfaces_test.c -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'axi_interfaces_test.c' to the project
+INFO: [HLS 200-1510] Running: open_solution solution2 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4/axi_interfaces_prj/solution2'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flgb2104-1-e'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flgb2104-1-e 
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: source ./axi_interfaces_prj/solution2/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 8 -dim 1 axi_interfaces d_i 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 8 -dim 1 axi_interfaces d_o 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register -register_mode both axi_interfaces d_o 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode axis -register -register_mode both axi_interfaces d_i 
+INFO: [HLS 200-1510] Running: set_directive_unroll -factor 8 axi_interfaces/For_Loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline -rewind axi_interfaces/For_Loop 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode s_axilite axi_interfaces 
+INFO: [HLS 200-1510] Running: export_design -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tool/Xilinx/Vivado/2022.1/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 14 12:53:24 2022...
+INFO: [HLS 200-802] Generated output file axi_interfaces_prj/solution2/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 8.88 seconds. CPU system time: 0.8 seconds. Elapsed time: 9.82 seconds; current allocated memory: -1025.008 MB.
+INFO: [HLS 200-112] Total CPU user time: 10.84 seconds. Total CPU system time: 1.23 seconds. Total elapsed time: 11.2 seconds; peak allocated memory: 471.137 MB.

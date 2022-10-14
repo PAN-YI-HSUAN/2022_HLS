@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Oct 14 12:53:19 2022
+# Process ID: 1224493
+# Current directory: /home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4/axi_interfaces_prj/solution2/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4/axi_interfaces_prj/solution2/impl/ip/vivado.log
+# Journal file: /home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab4/axi_interfaces_prj/solution2/impl/ip/vivado.jou
+# Running On: yhp, OS: Linux, CPU Frequency: 2500.000 MHz, CPU Physical cores: 6, Host memory: 33441 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

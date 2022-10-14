@@ -1,0 +1,7 @@
+INFO: [HLS 200-10] Running '/tool/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/apcc'
+INFO: [HLS 200-10] For user 'yhp' on host 'yhp' (Linux_x86_64 version 5.15.0-48-generic) on Wed Oct 12 01:47:01 CST 2022
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/yhp/Documents/Class/111-1_HLS/LabA/Interface_Synthesis/lab3/array_io_prj/solution1/csim/build'
+INFO: [APCC 202-3] Tmp directory is /tmp/apcc_db_yhp/9495961665510421782819
+INFO: [APCC 202-1] APCC is done.
+INFO: [HLS 200-112] Total CPU user time: 3.94 seconds. Total CPU system time: 0.1 seconds. Total elapsed time: 4.06 seconds; peak allocated memory: 19.324 MB.
