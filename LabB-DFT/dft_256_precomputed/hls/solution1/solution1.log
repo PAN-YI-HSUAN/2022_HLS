@@ -1,0 +1,898 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.466 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.8 seconds. CPU system time: 0.33 seconds. Elapsed time: 0.56 seconds; current allocated memory: 1.466 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.2 seconds. CPU system time: 0.37 seconds. Elapsed time: 2.42 seconds; current allocated memory: 468.008 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 468.008 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 468.008 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 468.008 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 489.430 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:19:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 508.332 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_14_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_14_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.04 seconds; current allocated memory: 509.773 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 509.773 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_18_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_18_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 510.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 510.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.466 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.73 seconds. CPU system time: 0.29 seconds. Elapsed time: 0.52 seconds; current allocated memory: 1.466 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.23 seconds. CPU system time: 0.32 seconds. Elapsed time: 2.33 seconds; current allocated memory: 468.008 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 468.008 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 468.008 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 468.008 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 489.430 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:19:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 508.328 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_14_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_14_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.07 seconds; current allocated memory: 509.770 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 509.770 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_18_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_18_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 510.160 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 510.160 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.77 seconds. CPU system time: 0.32 seconds. Elapsed time: 0.54 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.21 seconds. CPU system time: 0.32 seconds. Elapsed time: 2.32 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 462.988 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.055 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.613 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:19:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 503.824 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_14_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_14_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 505.359 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 505.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_18_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_18_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 505.844 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 505.844 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.75 seconds. CPU system time: 0.32 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.25 seconds. CPU system time: 0.38 seconds. Elapsed time: 2.4 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.004 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.070 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.926 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:19:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.02 seconds; current allocated memory: 503.855 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_14_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_14_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 505.387 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 505.387 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_18_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_18_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 505.875 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 505.875 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.78 seconds. CPU system time: 0.28 seconds. Elapsed time: 0.53 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.25 seconds. CPU system time: 0.35 seconds. Elapsed time: 2.38 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 462.992 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.059 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_14_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_18_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_23_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.867 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:19:13)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 503.828 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_14_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_14_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_14_2' (loop 'VITIS_LOOP_14_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add14_write_ln14', dft.cpp:14) of variable 'add', dft.cpp:15 on local variable 'add14' and 'load' operation ('add14_load', dft.cpp:15) on local variable 'add14'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_14_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.05 seconds; current allocated memory: 505.359 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 505.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_18_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_18_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_18_3' (loop 'VITIS_LOOP_18_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('add2526_write_ln18', dft.cpp:18) of variable 'add1', dft.cpp:19 on local variable 'add2526' and 'load' operation ('add2526_load', dft.cpp:19) on local variable 'add2526'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 5, Depth = 12, loop 'VITIS_LOOP_18_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 505.848 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 505.848 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.83 seconds. CPU system time: 0.38 seconds. Elapsed time: 0.61 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<(((2) * ((52) + (1))) + (61)) + (3)> table_lookup_4oPi_hotbm<52, 61>(int, double)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int clz<61, 124, 0>(ap_ufixed<124, 0, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.62.71.82.91.102.111.122.131.142.151)' into 'fp_struct<double>::to_double() const (.59.68.79.88.99.108.119.128.139.148)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:523:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.59.68.79.88.99.108.119.128.139.148)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:538:0)
+INFO: [HLS 214-178] Inlining function 'clz(int)' into 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:419:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::set_mantissa(ap_ufixed<53, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:419:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:419:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0> hotbm_::value_list<double>::sin_or_cos_approximation<63, 63>(bool, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<11>&)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::cos(double)' into 'cos' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/c/sincosdouble.cpp:12:0)
+INFO: [HLS 214-178] Inlining function 'cos' into '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::cos<int>(int)' (/tool/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:197:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::sin(double)' into 'sin' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/c/sincosdouble.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'sin' into '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::sin<int>(int)' (/tool/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:438:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::cos<int>(int)' into 'dft(float*, float*)' (dft.cpp:6:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::sin<int>(int)' into 'dft(float*, float*)' (dft.cpp:6:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10value_listIdE24sin_or_cos_approximationILi63ELi63EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi11EEE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1_bbE13neg_cos_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:246:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1_bbE13neg_sin_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:245:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1_bbE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:244:0)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:29:67)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.16 seconds. CPU system time: 0.58 seconds. Elapsed time: 4.58 seconds; current allocated memory: 463.418 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.418 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.19 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.23 seconds; current allocated memory: 540.711 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files/ap_fixed_ref.h:594: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.52 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.54 seconds; current allocated memory: 623.090 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_13_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hotbm_::sin_or_cos<double>' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:16:5).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:430) in function 'hotbm_::sin_or_cos<double>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:443) in function 'hotbm_::sin_or_cos<double>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:450) in function 'hotbm_::sin_or_cos<double>' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'out_bits.V' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:429) automatically.
+INFO: [XFORM 203-102] Partitioning array 'c' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:442) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:488:31) to (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:316:5) in function 'hotbm_::sin_or_cos<double>'... converting 13 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.55 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.61 seconds; current allocated memory: 751.102 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:23:14)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.3 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.32 seconds; current allocated memory: 804.223 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<double>' to 'sin_or_cos_double_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sin_or_cos<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 34, function 'sin_or_cos<double>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.24 seconds; current allocated memory: 805.953 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 805.953 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_13_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 56, loop 'VITIS_LOOP_13_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.25 seconds. CPU system time: 0 seconds. Elapsed time: 0.26 seconds; current allocated memory: 805.953 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 805.953 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_21_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 56, loop 'VITIS_LOOP_21_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 806.270 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 806.270 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_30_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_30_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 806.625 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 806.625 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 806.984 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 806.984 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sin_or_cos_double_s' pipeline 'sin_or_cos<double>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_170s_53ns_170_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_35ns_25ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_42ns_33ns_75_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44s_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_49ns_98_5_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_56ns_52s_108_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_63ns_126_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_164_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_83_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_double_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 809.262 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_13_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dft_Pipeline_VITIS_LOOP_13_2' pipeline 'VITIS_LOOP_13_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft_Pipeline_VITIS_LOOP_13_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.49 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 814.113 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_21_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.84 seconds. CPU system time: 0.39 seconds. Elapsed time: 0.61 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.15 seconds. CPU system time: 0.4 seconds. Elapsed time: 2.45 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 462.473 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 462.988 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.047 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_13_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 484.637 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:23:14)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 503.773 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_13_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('add', dft.cpp:17) and 'select' operation ('select_ln14', dft.cpp:14).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('add', dft.cpp:17) and 'select' operation ('select_ln14', dft.cpp:14).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('add', dft.cpp:17) and 'select' operation ('select_ln14', dft.cpp:14).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('add', dft.cpp:17) and 'select' operation ('select_ln14', dft.cpp:14).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'fadd' operation ('add', dft.cpp:17) and 'select' operation ('select_ln14', dft.cpp:14).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 12, loop 'VITIS_LOOP_13_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 505.344 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 505.344 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_21_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fadd' operation ('add1', dft.cpp:25) and 'select' operation ('select_ln22', dft.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fadd' operation ('add1', dft.cpp:25) and 'select' operation ('select_ln22', dft.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fadd' operation ('add1', dft.cpp:25) and 'select' operation ('select_ln22', dft.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fadd' operation ('add1', dft.cpp:25) and 'select' operation ('select_ln22', dft.cpp:22).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 5, distance = 1, offset = 1) between 'fadd' operation ('add1', dft.cpp:25) and 'select' operation ('select_ln22', dft.cpp:22).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 6, Depth = 12, loop 'VITIS_LOOP_21_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 505.855 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 505.855 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_30_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.81 seconds. CPU system time: 0.38 seconds. Elapsed time: 0.61 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::expv() const' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'ap_uint<(((2) * ((52) + (1))) + (61)) + (3)> table_lookup_4oPi_hotbm<52, 61>(int, double)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'unsigned int clz<61, 124, 0>(ap_ufixed<124, 0, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_range_redux.h:466:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::data() const (.62.71.82.91.102.111.122.131.142.151)' into 'fp_struct<double>::to_double() const (.59.68.79.88.99.108.119.128.139.148)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:523:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_double() const (.59.68.79.88.99.108.119.128.139.148)' into 'fp_struct<double>::to_ieee() const' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:538:0)
+INFO: [HLS 214-178] Inlining function 'clz(int)' into 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:419:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::set_mantissa(ap_ufixed<53, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:419:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:419:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::fp_struct(double)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void range_redux_payne_hanek_hotbm<61, double, 63, 63>(double, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<fp_struct<double>::EXP_BITS>&)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0> hotbm_::value_list<double>::sin_or_cos_approximation<63, 63>(bool, ap_uint<3>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_ufixed<63, 0, (ap_q_mode)5, (ap_o_mode)3, 0>&, ap_int<11>&)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'void scaled_fixed2ieee<63, 1>(ap_ufixed<63, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, double&, int)' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<double>::to_ieee() const' into 'double hotbm_::sin_or_cos<double>(double, bool, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:239:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::cos(double)' into 'cos' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/c/sincosdouble.cpp:12:0)
+INFO: [HLS 214-178] Inlining function 'cos' into '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::cos<int>(int)' (/tool/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:197:0)
+INFO: [HLS 214-178] Inlining function 'hotbm_::sin(double)' into 'sin' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/c/sincosdouble.cpp:7:0)
+INFO: [HLS 214-178] Inlining function 'sin' into '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::sin<int>(int)' (/tool/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/cmath:438:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::cos<int>(int)' into 'dft(float*, float*)' (dft.cpp:6:0)
+INFO: [HLS 214-178] Inlining function '__gnu_cxx::__enable_if<__is_integer<int>::__value, double>::__type std::sin<int>(int)' into 'dft(float*, float*)' (dft.cpp:6:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10value_listIdE24sin_or_cos_approximationILi63ELi63EEE9ap_ufixedIXT_ELi1EL9ap_q_mode5EL9ap_o_mode3ELi0EEbR7ap_uintILi3EERS3_IXT_ELi0ELS4_5ELS5_3ELi0EERS3_IXT0_ELi0ELS4_5ELS5_3ELi0EER6ap_intILi11EEE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:14:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1_bbE13neg_cos_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:246:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1_bbE13neg_sin_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:245:0)
+INFO: [HLS 214-248] Applying array_partition to '_ZZN6hotbm_10sin_or_cosIdEET_S1_bbE10swap_table': Complete partitioning on dimension 1. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:244:0)
+WARNING: [HLS 214-358] Array transformation on index using bit extension logic may lead to poor performance. Please use int or long for array index computation to benefit from optimizations. (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/common/hls_hotbm_double.cpp:29:67)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.14 seconds. CPU system time: 0.54 seconds. Elapsed time: 4.56 seconds; current allocated memory: 463.418 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 463.418 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.17 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.22 seconds; current allocated memory: 540.410 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files/ap_fixed_ref.h:594: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.53 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.56 seconds; current allocated memory: 623.074 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_13_2' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_21_3' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_30_4' (dft.cpp:8) in function 'dft' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'hotbm_::sin_or_cos<double>' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:16:5).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:430) in function 'hotbm_::sin_or_cos<double>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:443) in function 'hotbm_::sin_or_cos<double>' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:450) in function 'hotbm_::sin_or_cos<double>' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'out_bits.V' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:429) automatically.
+INFO: [XFORM 203-102] Partitioning array 'c' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_float_utils.h:442) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:488:31) to (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_hotbm.h:316:5) in function 'hotbm_::sin_or_cos<double>'... converting 13 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.56 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.6 seconds; current allocated memory: 749.031 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_11_1' (dft.cpp:8:9) in function 'dft' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_r' (dft.cpp:15:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'sum_i' (dft.cpp:23:14)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.3 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 799.855 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<double>' to 'sin_or_cos_double_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'sin_or_cos<double>'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 34, function 'sin_or_cos<double>'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.19 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.23 seconds; current allocated memory: 801.691 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.17 seconds; current allocated memory: 801.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_13_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_13_2'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_13_2' (loop 'VITIS_LOOP_13_2'): Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1) between 'fptrunc' operation ('conv1', dft.cpp:18) and 'fpext' operation ('tmp_s', dft.cpp:18).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 56, loop 'VITIS_LOOP_13_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.25 seconds; current allocated memory: 801.734 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 801.734 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_21_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_21_3'.
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 7, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 9, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+WARNING: [HLS 200-880] The II Violation in module 'dft_Pipeline_VITIS_LOOP_21_3' (loop 'VITIS_LOOP_21_3'): Unable to enforce a carried dependence constraint (II = 10, distance = 1, offset = 1) between 'fptrunc' operation ('conv3', dft.cpp:26) and 'fpext' operation ('tmp_4', dft.cpp:26).
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 11, Depth = 56, loop 'VITIS_LOOP_21_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.24 seconds; current allocated memory: 802.391 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 802.391 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft_Pipeline_VITIS_LOOP_30_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_30_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_30_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 802.918 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 802.918 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 803.262 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 803.262 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'sin_or_cos_double_s' pipeline 'sin_or_cos<double>' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_170s_53ns_170_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_35ns_25ns_60_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_42ns_33ns_75_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_44s_93_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_49ns_49ns_98_5_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_56ns_52s_108_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_64s_63ns_126_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_164_1_1_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_83_1_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_double_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.32 seconds; current allocated memory: 805.551 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_13_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dft_Pipeline_VITIS_LOOP_13_2' pipeline 'VITIS_LOOP_13_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitodp_32ns_64_6_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft_Pipeline_VITIS_LOOP_13_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.48 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 810.422 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft_Pipeline_VITIS_LOOP_21_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------

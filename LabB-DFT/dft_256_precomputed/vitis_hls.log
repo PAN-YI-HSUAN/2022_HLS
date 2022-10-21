@@ -1,0 +1,166 @@
+INFO: [HLS 200-10] Running '/tool/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'yhp' on host 'yhp' (Linux_x86_64 version 5.15.0-48-generic) on Fri Oct 21 13:15:44 CST 2022
+INFO: [HLS 200-10] On os Ubuntu 20.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/yhp/Documents/Class/111-1_HLS/LabB/dft_256_precomputed'
+Sourcing Tcl script '/home/yhp/Documents/Class/111-1_HLS/LabB/dft_256_precomputed/hls/solution4/csynth.tcl'
+INFO: [HLS 200-1510] Running: source /home/yhp/Documents/Class/111-1_HLS/LabB/dft_256_precomputed/hls/solution4/csynth.tcl
+INFO: [HLS 200-1510] Running: open_project hls 
+INFO: [HLS 200-10] Opening project '/home/yhp/Documents/Class/111-1_HLS/LabB/dft_256_precomputed/hls'.
+INFO: [HLS 200-1510] Running: set_top dft 
+INFO: [HLS 200-1510] Running: add_files coefficients256.h 
+INFO: [HLS 200-10] Adding design file 'coefficients256.h' to the project
+INFO: [HLS 200-1510] Running: add_files dft.cpp 
+INFO: [HLS 200-10] Adding design file 'dft.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files dft.h 
+INFO: [HLS 200-10] Adding design file 'dft.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb dft_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'dft_test.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb out.gold.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'out.gold.dat' to the project
+INFO: [HLS 200-1510] Running: open_solution solution4 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/yhp/Documents/Class/111-1_HLS/LabB/dft_256_precomputed/hls/solution4'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg484-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: source ./hls/solution4/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name dft dft 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -type cyclic -factor 16 -dim 1 dft real_sample 
+INFO: [HLS 200-1510] Running: set_directive_interface -mode ap_none dft real_sample 
+INFO: [HLS 200-1510] Running: set_directive_stream -depth 256 -type fifo dft real_sample 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'dft.cpp' ... 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (dft.cpp:8:9)
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 1 issue(s) in file dft.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-5555] Unsupported interface port data type in '#pragma HLS interface ap_none' (/home/yhp/Documents/Class/111-1_HLS/LabB/dft_256_precomputed/hls/solution4/directives.tcl:8:45)
+WARNING: [HLS 207-5292] unused parameter 'imag_sample' (dft.cpp:5:78)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0.7 seconds. CPU system time: 0.3 seconds. Elapsed time: 0.5 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+WARNING: [HLS 214-191] The stream pragma on function argument, in 'call' is unsupported (/home/yhp/Documents/Class/111-1_HLS/LabB/dft_256_precomputed/hls/solution4/directives.tcl:9:9)
+INFO: [HLS 214-188] Unrolling loop 'real_part' (dft.cpp:16:13) in function 'dft' partially with a factor of 16 (dft.cpp:6:0)
+INFO: [HLS 214-248] Applying array_partition to 'real_sample': Cyclic partitioning with factor 16 on dimension 1. (dft.cpp:6:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.37 seconds. CPU system time: 0.35 seconds. Elapsed time: 2.47 seconds; current allocated memory: 462.906 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 462.906 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 463.898 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.898 MB.
+INFO: [XFORM 203-721] Changing loop 'Loop_top_loop_proc' (dft.cpp:9) to a process function for dataflow in function 'dft'.
+WARNING: [HLS 200-786] Detected dataflow-on-top in function  'dft' (dft.cpp:5:1)  with default interface mode 'ap_ctrl_hs'. Overlapped execution of successive kernel calls will not happen unless interface mode 'ap_ctrl_chain' is used (or 'ap_ctrl_none' for a purely data-driven design).
+Resolution: For help on HLS 200-786 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-786.html
+INFO: [XFORM 203-712] Applying dataflow to function 'dft' (dft.cpp:5:1), detected/extracted 1 process function(s): 
+	 'Loop_top_loop_proc'.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 487.305 MB.
+INFO: [XFORM 203-541] Flattening a loop nest 'top_loop' (dft.cpp:9:6) in function 'Loop_top_loop_proc'.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 487.309 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'dft' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Loop_top_loop_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'top_loop_real_part'.
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 59, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+WARNING: [HLS 200-880] The II Violation in module 'Loop_top_loop_proc' (loop 'top_loop_real_part'): Unable to enforce a carried dependence constraint (II = 63, distance = 1, offset = 0) between 'store' operation ('tmp_r_write_ln16', dft.cpp:16) of variable 'tmp_r', dft.cpp:25 on local variable 'tmp_r' and 'load' operation ('tmp_r_load', dft.cpp:20) on local variable 'tmp_r'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 64, Depth = 70, loop 'top_loop_real_part'
+WARNING: [HLS 200-871] Estimated clock period (14.512ns) exceeds the target (target clock period: 10ns, clock uncertainty: 2.7ns, effective delay budget: 7.3ns).
+Resolution: For help on HLS 200-871 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'Loop_top_loop_proc' consists of the following:	'fadd' operation ('tmp_r', dft.cpp:25) [84]  (7.26 ns)
+	'fadd' operation ('tmp_r', dft.cpp:25) [97]  (7.26 ns)
+
+Resolution: For help on HLS 200-1016 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.58 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.6 seconds; current allocated memory: 491.238 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 491.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.22 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 491.238 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 491.238 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Loop_top_loop_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'Loop_top_loop_proc' pipeline 'top_loop_real_part' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Loop_top_loop_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 494.789 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dft' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_8' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_9' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_10' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_11' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_12' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_13' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_14' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/real_sample_15' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/imag_sample' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/sum_r' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dft/sum_i' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dft' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Port 'dft/imag_sample_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dft/imag_sample_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dft/imag_sample_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dft/imag_sample_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dft/imag_sample_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dft'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.4 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.42 seconds; current allocated memory: 499.820 MB.
+INFO: [RTMG 210-279] Implementing memory 'dft_Loop_top_loop_proc_cos_coefficients_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'dft_Loop_top_loop_proc_sin_coefficients_table_ROM_AUTO_1R' using auto ROMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.3 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 504.648 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.12 seconds; current allocated memory: 515.355 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dft.
+INFO: [VLOG 209-307] Generating Verilog RTL for dft.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 68.91 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 6.25 seconds. CPU system time: 0.7 seconds. Elapsed time: 6.2 seconds; current allocated memory: -980.922 MB.
+INFO: [HLS 200-112] Total CPU user time: 8.18 seconds. Total CPU system time: 1.14 seconds. Total elapsed time: 7.58 seconds; peak allocated memory: 1.461 GB.
