@@ -1,0 +1,596 @@
+<ENTRY>
+{
+ "thisFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/build_dir.sw_emu.u50/dut.xclbin.link_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:40 2022",
+ "timestampMillis": "1668188020138",
+ "buildStep": {
+  "cmdId": "20dc39b8-4a78-4c5c-8e28-e742f91adb4a",
+  "name": "v++",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/link.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2022.1/bin/unwrapped/lnx64.o/v++  --vivado.prop \"run.__KERNEL__.{STEPS.SYNTH_DESIGN.ARGS.MORE OPTIONS}={-directive sdx_optimization_effort_high}\" --vivado.prop run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true --vivado.param project.writeIntermediateCheckpoints=1 --advanced.misc \"report=type report_utilization name synth_report_utilization_summary steps {synth_design} runs {__KERNEL__} options {}\" --advanced.misc \"report=type report_utilization name impl_report_utilization_init_design_summary steps {init_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_init_design_summary steps {init_design} runs {impl_1} options {-max_paths 10}\" --advanced.param \"compiler.reportFailfast=pre_opt_design {__KERNEL_NAMES__} post_opt_design {__OCL_TOP__} post_route_design {__SLR__}\" --advanced.param \"compiler.reportQorAssessment=pre_opt_design {} post_opt_design {} post_route_design {}\" --advanced.misc \"report=type report_io name impl_report_io_place_design_summary steps {place_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_utilization name impl_report_utilization_place_design_summary steps {place_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_control_sets name impl_report_control_sets_place_design_summary steps {place_design} runs {impl_1} options {-verbose}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_place_design_summary steps {place_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_drc name impl_report_drc_route_design_summary steps {route_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_methodology name impl_report_methodology_route_design_summary steps {route_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_power name impl_report_power_route_design_summary steps {route_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_route_status name impl_report_route_status_route_design_summary steps {route_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_route_design_summary steps {route_design} runs {impl_1} options {-max_paths 10}\" --advanced.misc \"report=type report_clock_utilization name impl_report_clock_utilization_route_design_summary steps {route_design} runs {impl_1} options {}\" --advanced.misc \"report=type report_bus_skew name impl_report_bus_skew_route_design_summary steps {route_design} runs {impl_1} options {-warn_on_violation}\" --advanced.misc \"report=type report_timing_summary name impl_report_timing_summary_post_route_phys_opt_design_summary steps {post_route_phys_opt_design} runs {impl_1} options {-max_paths 10}\" -l -t sw_emu --platform /opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm --save-temps --config /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/conn_u50.cfg -I /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/problems/betweenness/kernel --temp_dir _x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1 --report_dir /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/reports/_build.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/dut --optimize 2 -R 2 --kernel_frequency 300 -o build_dir.sw_emu.u50/dut.xclbin _x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/dut.xo ",
+  "args": [
+   "-l",
+   "-t",
+   "sw_emu",
+   "--platform",
+   "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1/xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+   "--save-temps",
+   "--config",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/conn_u50.cfg",
+   "-I",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/problems/betweenness/kernel",
+   "--temp_dir",
+   "_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1",
+   "--report_dir",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/reports/_build.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/dut",
+   "--optimize",
+   "2",
+   "-R",
+   "2",
+   "--kernel_frequency",
+   "300",
+   "-o",
+   "build_dir.sw_emu.u50/dut.xclbin",
+   "_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/dut.xo"
+  ],
+  "iniFiles": [
+   {
+    "path": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/conn_u50.cfg",
+    "content": "[connectivity]\nsp=dut.offset:HBM[0]\nsp=dut.column:HBM[1]\nsp=dut.btwn:HBM[2]\nsp=dut.tmp0:HBM[3]\nsp=dut.tmp1:HBM[4]\nsp=dut.tmp2:HBM[5]\nsp=dut.tmp3:HBM[6]\nnk=dut:1:dut"
+   }
+  ],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:40 2022",
+ "timestampMillis": "1668188020174",
+ "status": {
+  "cmdId": "20dc39b8-4a78-4c5c-8e28-e742f91adb4a",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sat Nov 12 01:33:43 2022",
+ "timestampMillis": "1668188023654",
+ "buildSummary": {
+  "hardwarePlatform": "xilinx_u50_gen3x16_xdma_5_202210_1.xpfm",
+  "hardwareDsa": "",
+  "platformDirectory": "/opt/xilinx/platforms/xilinx_u50_gen3x16_xdma_5_202210_1",
+  "runtime": "OpenCL",
+  "systemConfig": "Linux",
+  "flow": "BF_LINK",
+  "target": "TT_SW_EMU",
+  "binaryContainer": {
+   "base": {
+    "type": "BT_UKNOWN",
+    "name": "dut",
+    "file": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/build_dir.sw_emu.u50/dut.xclbin",
+    "reports": [],
+    "uuid": ""
+   },
+   "kernels": []
+  },
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "dut",
+     "file": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/dut.xo",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/xo/dut/dut/cpu_sources/top.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [
+     "dut"
+    ],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "Vitis V++ Compiler Release 2022.1. SW Build 3524075 on 2022-04-13-17:42:45"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 12 01:33:43 2022",
+ "timestampMillis": "1668188023793",
+ "report": {
+  "path": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/systemDiagramModel.json",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "SYSTEM_DIAGRAM",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:43 2022",
+ "timestampMillis": "1668188023797",
+ "buildStep": {
+  "cmdId": "18500a33-13c5-4448-a428-9e1f7e9699e9",
+  "name": "regiongen",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_regiongen.log",
+  "commandLine": "/opt/Xilinx/Vitis/2022.1/bin/../runtime/bin/regiongen_new -v -m /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.xml -r /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.rtd -t alg -o xcl_top",
+  "args": [
+   "-v",
+   "-m",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.xml",
+   "-r",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.rtd",
+   "-t",
+   "alg",
+   "-o",
+   "xcl_top"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:43 2022",
+ "timestampMillis": "1668188023798",
+ "status": {
+  "cmdId": "18500a33-13c5-4448-a428-9e1f7e9699e9",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024471",
+ "status": {
+  "cmdId": "18500a33-13c5-4448-a428-9e1f7e9699e9",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024544",
+ "buildStep": {
+  "cmdId": "a2b52e49-2912-4cea-8326-3b83ac74da7d",
+  "name": "gcc",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut/dut_kernel_gcc.log",
+  "commandLine": "/opt/Xilinx/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/gcc -I . -I /opt/Xilinx/Vitis_HLS/2022.1/bin/../include -I /opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include -I /opt/Xilinx/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl -I /opt/Xilinx/Vitis/2022.1/bin/../common/technology/autopilot/opencl -I /opt/Xilinx/Vitis/2022.1/bin/../data/emulation/include -I /usr/include/x86_64-linux-gnu -std=c++14 -D KERNEL_NAME=dut -I /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/problems/betweenness/kernel -I /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/kernel -fPIC -g -c -DHLS_STREAM_THREAD_SAFE -MD -MT obj/top.o -MP -MF obj/top.Cd /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/xo/dut/dut/cpu_sources/top.cpp -o obj/top.o",
+  "args": [
+   "-I",
+   ".",
+   "-I",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../include",
+   "-I",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include",
+   "-I",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/Xilinx/Vitis/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/Xilinx/Vitis/2022.1/bin/../data/emulation/include",
+   "-I",
+   "/usr/include/x86_64-linux-gnu",
+   "-std=c++14",
+   "-D",
+   "KERNEL_NAME=dut",
+   "-I",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/problems/betweenness/kernel",
+   "-I",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/kernel",
+   "-fPIC",
+   "-g",
+   "-c",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-MD",
+   "-MT",
+   "obj/top.o",
+   "-MP",
+   "-MF",
+   "obj/top.Cd",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/xo/dut/dut/cpu_sources/top.cpp",
+   "-o",
+   "obj/top.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024546",
+ "status": {
+  "cmdId": "a2b52e49-2912-4cea-8326-3b83ac74da7d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024682",
+ "status": {
+  "cmdId": "a2b52e49-2912-4cea-8326-3b83ac74da7d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024687",
+ "buildStep": {
+  "cmdId": "8cc59001-458e-4d31-b9a1-2987b570101f",
+  "name": "ar",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut/dut_ar.log",
+  "commandLine": "/opt/Xilinx/Vivado/2022.1/tps/lnx64/binutils-2.26/bin/ar -cr /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut/dut.csim_cu.a /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut/obj/top.o",
+  "args": [
+   "-cr",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut/dut.csim_cu.a",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut/obj/top.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024687",
+ "status": {
+  "cmdId": "8cc59001-458e-4d31-b9a1-2987b570101f",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024731",
+ "status": {
+  "cmdId": "8cc59001-458e-4d31-b9a1-2987b570101f",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024739",
+ "buildStep": {
+  "cmdId": "a1eb77d7-febc-4c12-b6bb-b49f1e3458e7",
+  "name": "g++",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_xcl_top_gpp.log",
+  "commandLine": "/opt/Xilinx/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/g++ -I . -I /opt/Xilinx/Vitis_HLS/2022.1/bin/../include -I /opt/Xilinx/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl -I /opt/Xilinx/Vitis/2022.1/bin/../common/technology/autopilot/opencl -I /opt/Xilinx/Vitis/2022.1/bin/../data/emulation/include -I /opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include -fPIC -g -DHLS_STREAM_THREAD_SAFE -std=c++14 -fpermissive -c -MD -MT obj/xcl_top.o -MP -MF obj/xcl_top.CXXd xcl_top.cpp -o obj/xcl_top.o",
+  "args": [
+   "-I",
+   ".",
+   "-I",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../include",
+   "-I",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/Xilinx/Vitis/2022.1/bin/../common/technology/autopilot/opencl",
+   "-I",
+   "/opt/Xilinx/Vitis/2022.1/bin/../data/emulation/include",
+   "-I",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/auto_cc/include",
+   "-fPIC",
+   "-g",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-std=c++14",
+   "-fpermissive",
+   "-c",
+   "-MD",
+   "-MT",
+   "obj/xcl_top.o",
+   "-MP",
+   "-MF",
+   "obj/xcl_top.CXXd",
+   "xcl_top.cpp",
+   "-o",
+   "obj/xcl_top.o"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:44 2022",
+ "timestampMillis": "1668188024739",
+ "status": {
+  "cmdId": "a1eb77d7-febc-4c12-b6bb-b49f1e3458e7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025516",
+ "status": {
+  "cmdId": "a1eb77d7-febc-4c12-b6bb-b49f1e3458e7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025519",
+ "buildStep": {
+  "cmdId": "263a145b-b798-42c3-8077-fc14158f9cf8",
+  "name": "g++",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_top_gpp.log",
+  "commandLine": "/opt/Xilinx/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/g++ -fPIC -DHLS_STREAM_THREAD_SAFE -std=c++14 -Wall -shared -Wl,--whole-archive,-soname,dut.so -o dut.so dut/dut.csim_cu.a obj/xcl_top.o -Wl,--no-whole-archive -Wl,--as-needed -L /opt/Xilinx/Vitis_HLS/2022.1/bin/../lib/lnx64.o -lhlsmathsim -L /opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0 -lgmp -lmpfr -lIp_floating_point_v7_0_bitacc_cmodel -Wl,-rpath,/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0 -L /opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fft_v9_1 -lIp_xfft_v9_1_bitacc_cmodel -L /opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fir_v7_0 -lgmp -lIp_fir_compiler_v7_2_bitacc_cmodel -L /opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/lib/csim -lhlsmc++-GCC46 -L /opt/Xilinx/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/6.2.0/ -lgcov",
+  "args": [
+   "-fPIC",
+   "-DHLS_STREAM_THREAD_SAFE",
+   "-std=c++14",
+   "-Wall",
+   "-shared",
+   "-Wl,--whole-archive,-soname,dut.so",
+   "-o",
+   "dut.so",
+   "dut/dut.csim_cu.a",
+   "obj/xcl_top.o",
+   "-Wl,--no-whole-archive",
+   "-Wl,--as-needed",
+   "-L",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../lib/lnx64.o",
+   "-lhlsmathsim",
+   "-L",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0",
+   "-lgmp",
+   "-lmpfr",
+   "-lIp_floating_point_v7_0_bitacc_cmodel",
+   "-Wl,-rpath,/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fpo_v7_0",
+   "-L",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fft_v9_1",
+   "-lIp_xfft_v9_1_bitacc_cmodel",
+   "-L",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/tools/fir_v7_0",
+   "-lgmp",
+   "-lIp_fir_compiler_v7_2_bitacc_cmodel",
+   "-L",
+   "/opt/Xilinx/Vitis_HLS/2022.1/bin/../lnx64/lib/csim",
+   "-lhlsmc++-GCC46",
+   "-L",
+   "/opt/Xilinx/Vivado/2022.1/tps/lnx64/gcc-8.3.0/bin/../lib/gcc/x86_64-pc-linux-gnu/6.2.0/",
+   "-lgcov"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025519",
+ "status": {
+  "cmdId": "263a145b-b798-42c3-8077-fc14158f9cf8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025575",
+ "status": {
+  "cmdId": "263a145b-b798-42c3-8077-fc14158f9cf8",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025616",
+ "report": {
+  "path": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_xml.rtd",
+  "name": "",
+  "fileType": "JSON",
+  "reportType": "XCLBIN_INFO",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025624",
+ "buildStep": {
+  "cmdId": "6a54947a-6dcd-4174-81c2-a17c1e6fbe04",
+  "name": "xclbinutil",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_xclbinutil.log",
+  "commandLine": "/opt/Xilinx/Vitis/2022.1/bin/xclbinutil --add-section BITSTREAM:RAW:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.so --force --target sw_emu --add-section :JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.rtd --append-section :JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/appendSection.rtd --add-section CLOCK_FREQ_TOPOLOGY:JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_xml.rtd --add-section BUILD_METADATA:JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_build.rtd --add-section EMBEDDED_METADATA:RAW:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.xml --add-section SYSTEM_METADATA:RAW:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/systemDiagramModel.json --output /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/build_dir.sw_emu.u50/dut.xclbin",
+  "args": [
+   "--add-section",
+   "BITSTREAM:RAW:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.so",
+   "--force",
+   "--target",
+   "sw_emu",
+   "--add-section",
+   ":JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.rtd",
+   "--append-section",
+   ":JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/appendSection.rtd",
+   "--add-section",
+   "CLOCK_FREQ_TOPOLOGY:JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_xml.rtd",
+   "--add-section",
+   "BUILD_METADATA:JSON:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut_build.rtd",
+   "--add-section",
+   "EMBEDDED_METADATA:RAW:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/dut.xml",
+   "--add-section",
+   "SYSTEM_METADATA:RAW:/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/link/int/systemDiagramModel.json",
+   "--output",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/build_dir.sw_emu.u50/dut.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025624",
+ "status": {
+  "cmdId": "6a54947a-6dcd-4174-81c2-a17c1e6fbe04",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025710",
+ "status": {
+  "cmdId": "6a54947a-6dcd-4174-81c2-a17c1e6fbe04",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025713",
+ "buildStep": {
+  "cmdId": "0c64d08c-b9c1-4108-af38-3d81b12b9a4d",
+  "name": "xclbinutil",
+  "logFile": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/build_dir.sw_emu.u50/dut.xclbin.info",
+  "commandLine": "/opt/Xilinx/Vitis/2022.1/bin/xclbinutil --quiet --info --input /mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/build_dir.sw_emu.u50/dut.xclbin",
+  "args": [
+   "--quiet",
+   "--info",
+   "--input",
+   "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/build_dir.sw_emu.u50/dut.xclbin"
+  ],
+  "iniFiles": [],
+  "cwd": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025713",
+ "status": {
+  "cmdId": "0c64d08c-b9c1-4108-af38-3d81b12b9a4d",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025786",
+ "status": {
+  "cmdId": "0c64d08c-b9c1-4108-af38-3d81b12b9a4d",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025935",
+ "report": {
+  "path": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/reports/_build.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/dut/link/v++_link_dut_guidance.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025935",
+ "report": {
+  "path": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/v++_link_dut_guidance.pb",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025938",
+ "report": {
+  "path": "/mnt/HLSNAS/02.RwqpZQ/tseng_betweenness/_x_temp.sw_emu.xilinx_u50_gen3x16_xdma_5_202210_1/logs/optraceViewer.html",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "OPERATION_TRACE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sat Nov 12 01:33:45 2022",
+ "timestampMillis": "1668188025940",
+ "status": {
+  "cmdId": "20dc39b8-4a78-4c5c-8e28-e742f91adb4a",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

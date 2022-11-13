@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1668331070809">
+  <ports id="1" name="gmem0" type="PortType" coreId="3621216858" bitwidth="32" iftype="IfTypeFifo">
+    <dataOutputObjs>getelementptr</dataOutputObjs>
+  </ports>
+  <ports id="2" name="sext_ln145" type="PortType" coreId="1886352443" bitwidth="62">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="add" type="PortType" coreId="51" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="numVert" type="PortType" coreId="1431141256" bitwidth="32">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="offset_buf" type="PortType" coreName="RAM" coreId="0" bitwidth="16" direction="DirOut" iftype="IfTypeRegister" arraysize="3534">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <ports id="6" name="btwn_buf" type="PortType" coreName="RAM" coreId="3141952448" bitwidth="32" direction="DirOut" iftype="IfTypeRegister" arraysize="3534">
+    <dataInputObjs>getelementptr</dataInputObjs>
+  </ports>
+  <edges id="53" source_obj="//@ports.3" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="55" source_obj="//@ports.2" sink_obj="//@blocks.0/@node_objs.2"/>
+  <edges id="58" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.3"/>
+  <edges id="59" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="62" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="63" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="64" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="65" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="66" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="67" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="70" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="73" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="74" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="75" edge_type="CtrlEdge" source_obj="//@blocks.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="76" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="77" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="78" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.1"/>
+  <edges id="79" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.0"/>
+  <edges id="80" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.1"/>
+  <edges id="81" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="82" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.2"/>
+  <edges id="83" source_obj="//@regions.0/@basic_blocks.1/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="84" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="85" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.1/@node_objs.3"/>
+  <edges id="86" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.4/@node_objs.0"/>
+  <edges id="89" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.0"/>
+  <edges id="90" source_obj="//@regions.0/@basic_blocks.2/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.1"/>
+  <edges id="91" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@ports.4"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.2"/>
+  <edges id="95" source_obj="//@regions.0/@basic_blocks.2/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="96" source_obj="//@regions.0/@basic_blocks.2/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.3"/>
+  <edges id="97" source_obj="//@regions.0/@basic_blocks.1/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="98" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.4"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.2/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="100" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="101" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.2/@node_objs.5"/>
+  <edges id="102" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@ports.5"/>
+  <edges id="104" source_obj="//@regions.0/@basic_blocks.1/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.0"/>
+  <edges id="107" source_obj="//@regions.0/@basic_blocks.3/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.1"/>
+  <edges id="108" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.3/@node_objs.2"/>
+  <edges id="161" edge_type="CtrlEdge" source_obj="//@blocks.0" sink_obj="//@regions.0/@basic_blocks.0"/>
+  <edges id="162" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@blocks.1"/>
+  <edges id="163" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.0" sink_obj="//@regions.0/@basic_blocks.1"/>
+  <edges id="164" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.2"/>
+  <edges id="165" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.1" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="166" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="167" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.2" sink_obj="//@regions.0/@basic_blocks.3"/>
+  <edges id="168" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.3" sink_obj="//@regions.0/@basic_blocks.4"/>
+  <edges id="169" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.4" sink_obj="//@regions.0/@basic_blocks.5"/>
+  <edges id="170" edge_type="CtrlEdge" source_obj="//@regions.0/@basic_blocks.5" sink_obj="//@regions.0/@basic_blocks.0" is_back_edge="1"/>
+  <edges id="171" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="172" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <edges id="173" edge_type="VirtEdge" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.5/@node_objs.0"/>
+  <blocks id="15" name="newFuncRoot" type="BlockType">
+    <controlOutputObjs>for.body</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="i" originalName="i" coreId="1667592275" bitwidth="12" opcode="alloca" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataOutputObjs>store</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <dataOutputObjs>store</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="numVert_read" coreId="3344699613" bitwidth="32" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>numVert</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="add_read" coreId="1389024672" bitwidth="32" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>icmp</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="10" name="sext_ln145_read" coreId="1382868416" bitwidth="62" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataInputObjs>sext_ln145</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="11" name="sext_ln145_cast" coreId="1383180288" bitwidth="64" opcode="sext" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>getelementptr</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="13" name="i_write_ln0" coreId="543716455" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="14" name="br_ln0" coreId="1852404340" opcode="br" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <controlInputObjs>for.body</controlInputObjs>
+    </node_objs>
+  </blocks>
+  <blocks id="48" name="Store_edge_loop.exitStub" type="BlockType">
+    <controlInputObjs>for.body</controlInputObjs>
+    <controlOutputObjs>br</controlOutputObjs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="_ln0" coreId="3141699296" opcode="ret" nodeLabel="1.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1"/>
+  </blocks>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="155" pipe_depth="3" RegionName="Store_vertice_loop">
+    <basic_blocks id="24" name="for.body" type="BlockType">
+      <controlInputObjs>newFuncRoot</controlInputObjs>
+      <controlInputObjs>for.inc</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>Store_edge_loop.exitStub</controlOutputObjs>
+      <controlOutputObjs>for.body.split</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="16" name="i_1" lineNumber="145" originalName="i" fileName="top.cpp" fileDirectory=".." coreId="3141807776" contextFuncName="dut" bitwidth="12" opcode="load" m_display="0" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>alloca</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+        <dataOutputObjs>zext</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="18" name="gmem0_addr" lineNumber="145" fileName="top.cpp" fileDirectory=".." coreId="4294967040" contextFuncName="dut" bitwidth="32" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>gmem0</dataInputObjs>
+        <dataInputObjs>sext</dataInputObjs>
+        <dataOutputObjs>read</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="20" name="icmp_ln145" lineNumber="145" fileName="top.cpp" fileDirectory=".." rtlName="icmp_ln145_fu_134_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="dut" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.62" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="22" name="add_ln145" lineNumber="145" fileName="top.cpp" fileDirectory=".." rtlName="add_ln145_fu_140_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="dut" bitwidth="12" opcode="add" m_display="0" m_delay="0.74" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="23" name="br_ln145" lineNumber="145" fileName="top.cpp" fileDirectory=".." coreId="0" contextFuncName="dut" opcode="br" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.body.split</controlInputObjs>
+        <controlInputObjs>Store_edge_loop.exitStub</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="top.cpp">
+        <validLinenumbers>145</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="30" name="for.body.split" type="BlockType">
+      <controlInputObjs>for.body</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.then</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="25" name="i_cast1" lineNumber="145" fileName="top.cpp" fileDirectory=".." rtlName="i_cast1_fu_173_p1" coreId="0" contextFuncName="dut" bitwidth="64" opcode="zext" nodeLabel="1.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+        <dataOutputObjs>getelementptr</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="26" name="i_cast" lineNumber="145" fileName="top.cpp" fileDirectory=".." rtlName="i_cast_fu_146_p1" coreId="0" contextFuncName="dut" bitwidth="32" opcode="zext" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>load</dataInputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+        <dataOutputObjs>icmp</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="28" name="icmp_ln146" lineNumber="146" fileName="top.cpp" fileDirectory=".." rtlName="icmp_ln146_fu_150_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="dut" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="146" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="29" name="br_ln146" lineNumber="146" fileName="top.cpp" fileDirectory=".." coreId="7955819" contextFuncName="dut" opcode="br" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="146" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>for.inc</controlInputObjs>
+        <controlInputObjs>if.then</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="top.cpp">
+        <validLinenumbers>145</validLinenumbers>
+        <validLinenumbers>146</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="37" name="if.then" type="BlockType">
+      <controlInputObjs>for.body.split</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.end</controlOutputObjs>
+      <controlOutputObjs>if.then5</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="31" name="gmem0_addr_read" lineNumber="147" fileName="top.cpp" fileDirectory=".." coreName="m_axi" implIndex="m_axi" control="no" opType="adapter" coreId="121" contextFuncName="dut" bitwidth="32" opcode="read" nodeLabel="1.0" m_display="0" m_delay="2.43" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="147" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <dataOutputObjs>trunc</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="32" name="trunc_ln147" lineNumber="147" fileName="top.cpp" fileDirectory=".." rtlName="trunc_ln147_fu_177_p1" coreId="176" contextFuncName="dut" bitwidth="16" opcode="trunc" nodeLabel="1.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="147" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="33" name="offset_buf_addr" lineNumber="147" fileName="top.cpp" fileDirectory=".." coreId="0" contextFuncName="dut" bitwidth="12" opcode="getelementptr" nodeLabel="2.0" m_display="0" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="147" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>offset_buf</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="34" name="offset_buf_addr_write_ln147" lineNumber="147" fileName="top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="dut" opcode="store" nodeLabel="2.0" m_display="0" m_delay="1.23" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="147" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>trunc</dataInputObjs>
+        <dataInputObjs>getelementptr</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="35" name="icmp_ln148" lineNumber="148" fileName="top.cpp" fileDirectory=".." rtlName="icmp_ln148_fu_156_p2" coreName="Cmp" implIndex="auto" control="no" opType="icmp" coreId="9" contextFuncName="dut" bitwidth="1" opcode="icmp" m_display="0" m_delay="0.85" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="148" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>br</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="36" name="br_ln148" lineNumber="148" fileName="top.cpp" fileDirectory=".." coreId="3141944848" contextFuncName="dut" opcode="br" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="148" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>icmp</dataInputObjs>
+        <controlInputObjs>if.then5</controlInputObjs>
+        <controlInputObjs>if.end</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="top.cpp">
+        <validLinenumbers>147</validLinenumbers>
+        <validLinenumbers>148</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="41" name="if.then5" type="BlockType">
+      <controlInputObjs>if.then</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>if.end</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="38" name="btwn_buf_addr" lineNumber="149" fileName="top.cpp" fileDirectory=".." coreId="3141949952" contextFuncName="dut" bitwidth="12" opcode="getelementptr" nodeLabel="1.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="149" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>zext</dataInputObjs>
+        <dataOutputObjs>btwn_buf</dataOutputObjs>
+        <dataOutputObjs>store</dataOutputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="39" name="btwn_buf_addr_write_ln149" lineNumber="149" fileName="top.cpp" fileDirectory=".." coreName="RAM" implIndex="auto" control="no" opType="ram" coreId="83" contextFuncName="dut" opcode="store" nodeLabel="1.0" m_display="0" m_delay="1.64" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="149" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>getelementptr</dataInputObjs>
+        <constName>empty</constName>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="40" name="br_ln150" lineNumber="150" fileName="top.cpp" fileDirectory=".." coreId="176" contextFuncName="dut" opcode="br" nodeLabel="1.0" m_display="0" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="150" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <controlInputObjs>if.end</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="top.cpp">
+        <validLinenumbers>149</validLinenumbers>
+        <validLinenumbers>150</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="43" name="if.end" type="BlockType">
+      <controlInputObjs>if.then</controlInputObjs>
+      <controlInputObjs>if.then5</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.inc</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="42" name="br_ln151" lineNumber="151" fileName="top.cpp" fileDirectory=".." coreId="3141676640" contextFuncName="dut" opcode="br" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="151" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <controlInputObjs>for.inc</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="top.cpp">
+        <validLinenumbers>151</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+    <basic_blocks id="46" name="for.inc" type="BlockType">
+      <controlInputObjs>for.body.split</controlInputObjs>
+      <controlInputObjs>if.end</controlInputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>br</controlOutputObjs>
+      <controlOutputObjs>for.body</controlOutputObjs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="44" name="i_write_ln145" lineNumber="145" fileName="top.cpp" fileDirectory=".." coreId="1463969536" contextFuncName="dut" opcode="store" m_display="0" m_delay="0.38" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>alloca</dataInputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="45" name="br_ln145" lineNumber="145" fileName="top.cpp" fileDirectory=".." coreId="20" contextFuncName="dut" opcode="br" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="top.cpp" linenumber="145" fileDirectory="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness" functionName="dut"/>
+        <controlInputObjs>for.body</controlInputObjs>
+      </node_objs>
+      <fileValidLineNumbers fileName="top.cpp">
+        <validLinenumbers>145</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <regnodes realName="i_reg_181">
+    <nodeIds>7</nodeIds>
+  </regnodes>
+  <regnodes realName="trunc_ln147_reg_215">
+    <nodeIds>32</nodeIds>
+  </regnodes>
+  <regnodes realName="i_1_reg_193">
+    <nodeIds>16</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln148_reg_206">
+    <nodeIds>35</nodeIds>
+  </regnodes>
+  <regnodes realName="i_cast1_reg_210">
+    <nodeIds>25</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln146_reg_202">
+    <nodeIds>28</nodeIds>
+  </regnodes>
+  <regnodes realName="sext_ln145_cast_reg_188">
+    <nodeIds>11</nodeIds>
+  </regnodes>
+  <regnodes realName="icmp_ln145_reg_198">
+    <nodeIds>20</nodeIds>
+  </regnodes>
+  <expressionNodes realName="icmp_ln148_fu_156">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_fu_68">
+    <nodeIds>7</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln146_fu_150">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="offset_buf_addr_gep_fu_109">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln145_cast_fu_122">
+    <nodeIds>11</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="gmem0_addr_fu_167">
+    <nodeIds>18</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast1_fu_173">
+    <nodeIds>25</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln145_fu_140">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="btwn_buf_addr_gep_fu_95">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="trunc_ln147_fu_177">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="i_cast_fu_146">
+    <nodeIds>26</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="icmp_ln145_fu_134">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <ioNodes realName="store_ln145_store_fu_162">
+    <nodeIds>44</nodeIds>
+  </ioNodes>
+  <ioNodes realName="add_read_read_fu_78">
+    <nodeIds>9</nodeIds>
+  </ioNodes>
+  <ioNodes realName="numVert_read_read_fu_72">
+    <nodeIds>8</nodeIds>
+  </ioNodes>
+  <ioNodes realName="i_1_load_fu_131">
+    <nodeIds>16</nodeIds>
+  </ioNodes>
+  <ioNodes realName="gmem0_addr_read_read_fu_90">
+    <nodeIds>31</nodeIds>
+  </ioNodes>
+  <ioNodes realName="sext_ln145_read_read_fu_84">
+    <nodeIds>10</nodeIds>
+  </ioNodes>
+  <ioNodes realName="store_ln0_store_fu_126">
+    <nodeIds>13</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="btwn_buf">
+    <nodeIds>39</nodeIds>
+  </memoryPorts>
+  <memoryPorts dataString="offset_buf">
+    <nodeIds>34</nodeIds>
+  </memoryPorts>
+  <ioPorts name="add">
+    <contents name="read">
+      <nodeIds>9</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="btwn_buf(p0)">
+    <contents name="store">
+      <nodeIds>39</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="gmem0">
+    <contents name="read">
+      <nodeIds>31</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="numVert">
+    <contents name="read">
+      <nodeIds>8</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="offset_buf(p0)">
+    <contents name="store">
+      <nodeIds>34</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="sext_ln145">
+    <contents name="read">
+      <nodeIds>10</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+    </states>
+    <states id="3">
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="dut_Pipeline_Store_vertice_loop" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="3538" mMaxLatency="3538">
+      <subRegions>2</subRegions>
+      <subRegions>3</subRegions>
+      <subRegions>4</subRegions>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="2" mTag="Entry" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>15</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="3" mTag="Store_vertice_loop" mII="1" mDepth="3" mMinTripCount="3535" mMaxTripCount="3535" mMinLatency="3536" mMaxLatency="3536" mType="1">
+      <basicBlocks>24</basicBlocks>
+      <basicBlocks>30</basicBlocks>
+      <basicBlocks>37</basicBlocks>
+      <basicBlocks>41</basicBlocks>
+      <basicBlocks>43</basicBlocks>
+      <basicBlocks>46</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+    <cfgRegions mId="4" mTag="Return" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1">
+      <basicBlocks>48</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

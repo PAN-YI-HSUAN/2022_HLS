@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        ".synopsys_dc.setup": "shellscript",
+        "*.sdc": "shellscript",
+        "cstdlib": "cpp"
+    }
+}

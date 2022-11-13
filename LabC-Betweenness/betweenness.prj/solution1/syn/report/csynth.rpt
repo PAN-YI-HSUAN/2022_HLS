@@ -1,0 +1,265 @@
+
+
+================================================================
+== Synthesis Summary Report of 'dut'
+================================================================
++ General Information: 
+    * Date:           Sun Nov 13 17:17:53 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:47:01 MDT 2022)
+    * Project:        betweenness.prj
+    * Solution:       solution1 (Vitis Kernel Flow Target)
+    * Product family: virtexuplus
+    * Target device:  xcu280-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------+--------+-------+------------+-----------+----------+------------+--------+----------+----------+---------+------------+------------+---------+
+    |                    Modules                   |  Issue |       |  Latency   |  Latency  | Iteration|            |  Trip  |          |          |         |            |            |         |
+    |                    & Loops                   |  Type  | Slack |  (cycles)  |    (ns)   |  Latency |  Interval  |  Count | Pipelined|   BRAM   |   DSP   |     FF     |     LUT    |   URAM  |
+    +----------------------------------------------+--------+-------+------------+-----------+----------+------------+--------+----------+----------+---------+------------+------------+---------+
+    |+ dut                                         |  Timing|  -0.00|  1636372031|  5.449e+09|         -|  1636372032|       -|        no|  35 (~0%)|  7 (~0%)|  6576 (~0%)|  9393 (~0%)|  3 (~0%)|
+    | + dut_Pipeline_Store_vertice_loop            |  Timing|  -0.00|        3538|  1.178e+04|         -|        3538|       -|        no|         -|        -|    61 (~0%)|   124 (~0%)|        -|
+    |  o Store_vertice_loop                        |       -|   2.43|        3536|  1.177e+04|         3|           1|    3535|       yes|         -|        -|           -|           -|        -|
+    | + dut_Pipeline_Store_edge_loop               |  Timing|  -0.00|       41597|  1.385e+05|         -|       41597|       -|        no|         -|        -|    72 (~0%)|   109 (~0%)|        -|
+    |  o Store_edge_loop                           |       -|   2.43|       41595|  1.385e+05|         3|           1|   41594|       yes|         -|        -|           -|           -|        -|
+    | + dut_Pipeline_Output_loop                   |  Timing|  -0.00|        3537|  1.178e+04|         -|        3537|       -|        no|         -|        -|    52 (~0%)|   102 (~0%)|        -|
+    |  o Output_loop                               |       -|   2.43|        3535|  1.177e+04|         3|           1|    3534|       yes|         -|        -|           -|           -|        -|
+    | o Main_loop                                  |       -|   2.43|  1636326816|  5.449e+09|    463024|           -|    3534|        no|         -|        -|           -|           -|        -|
+    |  + dut_Pipeline_Clear_loop                   |       -|   0.03|        3536|  1.177e+04|         -|        3536|       -|        no|         -|        -|    14 (~0%)|   206 (~0%)|        -|
+    |   o Clear_loop                               |       -|   2.43|        3534|  1.177e+04|         1|           1|    3534|       yes|         -|        -|           -|           -|        -|
+    |  + dut_Pipeline_Queue_loop_Edge_loop         |       -|   0.01|      268609|  8.945e+05|         -|      268609|       -|        no|         -|        -|  1118 (~0%)|  1478 (~0%)|        -|
+    |   o Queue_loop_Edge_loop                     |      II|   2.43|      268607|  8.945e+05|        26|           2|  134292|       yes|         -|        -|           -|           -|        -|
+    |  + dut_Pipeline_Dequeue_loop_Computing_loop  |       -|   0.09|      190872|  6.356e+05|         -|      190872|       -|        no|         -|  5 (~0%)|  1581 (~0%)|  1126 (~0%)|        -|
+    |   o Dequeue_loop_Computing_loop              |      II|   2.43|      190870|  6.356e+05|        37|           2|   95418|       yes|         -|        -|           -|           -|        -|
+    +----------------------------------------------+--------+-------+------------+-----------+----------+------------+--------+----------+----------+---------+------------+------------+---------+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| Interface   | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   |
+|             | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+| m_axi_gmem0 | 32 -> 32   | 64            | 32      | slave  | 0        | 512       | 256          | 2            | 16          | 1           |
+| m_axi_gmem1 | 32 -> 32   | 64            | 32      | slave  | 0        | 512       | 256          | 2            | 16          | 1           |
+| m_axi_gmem3 | 32 -> 32   | 64            | 32      | slave  | 0        | 512       | 256          | 2            | 16          | 1           |
+| m_axi_gmem6 | 32 -> 32   | 64            | 32      | slave  | 0        | 512       | 256          | 2            | 16          | 1           |
+| m_axi_gmem7 | 32 -> 32   | 64            | 32      | slave  | 0        | 512       | 256          | 2            | 16          | 1           |
+| m_axi_gmem8 | 32 -> 32   | 64            | 32      | slave  | 0        | 512       | 256          | 2            | 16          | 1           |
+| m_axi_gmem9 | 32 -> 32   | 64            | 32      | slave  | 0        | 512       | 256          | 2            | 16          | 1           |
++-------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 7             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | numVert  | 0x10   | 32    | W      | Data signal of numVert           |                                                                                    |
+| s_axi_control | numEdge  | 0x18   | 32    | W      | Data signal of numEdge           |                                                                                    |
+| s_axi_control | offset_1 | 0x20   | 32    | W      | Data signal of offset            |                                                                                    |
+| s_axi_control | offset_2 | 0x24   | 32    | W      | Data signal of offset            |                                                                                    |
+| s_axi_control | column_1 | 0x2c   | 32    | W      | Data signal of column            |                                                                                    |
+| s_axi_control | column_2 | 0x30   | 32    | W      | Data signal of column            |                                                                                    |
+| s_axi_control | btwn_1   | 0x38   | 32    | W      | Data signal of btwn              |                                                                                    |
+| s_axi_control | btwn_2   | 0x3c   | 32    | W      | Data signal of btwn              |                                                                                    |
+| s_axi_control | tmp0_1   | 0x44   | 32    | W      | Data signal of tmp0              |                                                                                    |
+| s_axi_control | tmp0_2   | 0x48   | 32    | W      | Data signal of tmp0              |                                                                                    |
+| s_axi_control | tmp1_1   | 0x50   | 32    | W      | Data signal of tmp1              |                                                                                    |
+| s_axi_control | tmp1_2   | 0x54   | 32    | W      | Data signal of tmp1              |                                                                                    |
+| s_axi_control | tmp2_1   | 0x5c   | 32    | W      | Data signal of tmp2              |                                                                                    |
+| s_axi_control | tmp2_2   | 0x60   | 32    | W      | Data signal of tmp2              |                                                                                    |
+| s_axi_control | tmp3_1   | 0x68   | 32    | W      | Data signal of tmp3              |                                                                                    |
+| s_axi_control | tmp3_2   | 0x6c   | 32    | W      | Data signal of tmp3              |                                                                                    |
++---------------+----------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------+
+| Argument | Direction | Datatype      |
++----------+-----------+---------------+
+| numVert  | in        | unsigned int  |
+| numEdge  | in        | unsigned int  |
+| offset   | in        | unsigned int* |
+| column   | in        | unsigned int* |
+| btwn     | out       | float*        |
+| tmp0     | unused    | unsigned int* |
+| tmp1     | unused    | unsigned int* |
+| tmp2     | unused    | unsigned int* |
+| tmp3     | unused    | unsigned int* |
++----------+-----------+---------------+
+
+* SW-to-HW Mapping
++----------+---------------+-----------+----------+------------------------------------+
+| Argument | HW Interface  | HW Type   | HW Usage | HW Info                            |
++----------+---------------+-----------+----------+------------------------------------+
+| numVert  | s_axi_control | register  |          | name=numVert offset=0x10 range=32  |
+| numEdge  | s_axi_control | register  |          | name=numEdge offset=0x18 range=32  |
+| offset   | m_axi_gmem0   | interface |          |                                    |
+| offset   | s_axi_control | register  | offset   | name=offset_1 offset=0x20 range=32 |
+| offset   | s_axi_control | register  | offset   | name=offset_2 offset=0x24 range=32 |
+| column   | m_axi_gmem1   | interface |          |                                    |
+| column   | s_axi_control | register  | offset   | name=column_1 offset=0x2c range=32 |
+| column   | s_axi_control | register  | offset   | name=column_2 offset=0x30 range=32 |
+| btwn     | m_axi_gmem3   | interface |          |                                    |
+| btwn     | s_axi_control | register  | offset   | name=btwn_1 offset=0x38 range=32   |
+| btwn     | s_axi_control | register  | offset   | name=btwn_2 offset=0x3c range=32   |
+| tmp0     | m_axi_gmem6   | interface |          |                                    |
+| tmp0     | s_axi_control | register  | offset   | name=tmp0_1 offset=0x44 range=32   |
+| tmp0     | s_axi_control | register  | offset   | name=tmp0_2 offset=0x48 range=32   |
+| tmp1     | m_axi_gmem7   | interface |          |                                    |
+| tmp1     | s_axi_control | register  | offset   | name=tmp1_1 offset=0x50 range=32   |
+| tmp1     | s_axi_control | register  | offset   | name=tmp1_2 offset=0x54 range=32   |
+| tmp2     | m_axi_gmem8   | interface |          |                                    |
+| tmp2     | s_axi_control | register  | offset   | name=tmp2_1 offset=0x5c range=32   |
+| tmp2     | s_axi_control | register  | offset   | name=tmp2_2 offset=0x60 range=32   |
+| tmp3     | m_axi_gmem9   | interface |          |                                    |
+| tmp3     | s_axi_control | register  | offset   | name=tmp3_1 offset=0x68 range=32   |
+| tmp3     | s_axi_control | register  | offset   | name=tmp3_2 offset=0x6c range=32   |
++----------+---------------+-----------+----------+------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+--------------------+-----------+----------+-------+---------------+
+| HW Interface | Loop               | Direction | Length   | Width | Location      |
++--------------+--------------------+-----------+----------+-------+---------------+
+| m_axi_gmem0  | Store_vertice_loop | read      | variable | 32    | top.cpp:145:3 |
+| m_axi_gmem1  | Store_edge_loop    | read      | variable | 32    | top.cpp:154:3 |
+| m_axi_gmem3  | Output_loop        | write     | variable | 32    | top.cpp:300:3 |
++--------------+--------------------+-----------+----------+-------+---------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++---------------------------------------------+-----+--------+-------------+------+---------+---------+
+| Name                                        | DSP | Pragma | Variable    | Op   | Impl    | Latency |
++---------------------------------------------+-----+--------+-------------+------+---------+---------+
+| + dut                                       | 7   |        |             |      |         |         |
+|   add_fu_394_p2                             | -   |        | add         | add  | fabric  | 0       |
+|   add_ln145_fu_399_p2                       | -   |        | add_ln145   | add  | fabric  | 0       |
+|   i_3_fu_489_p2                             | -   |        | i_3         | add  | fabric  | 0       |
+|  + dut_Pipeline_Store_vertice_loop          | 0   |        |             |      |         |         |
+|    add_ln145_fu_140_p2                      | -   |        | add_ln145   | add  | fabric  | 0       |
+|  + dut_Pipeline_Store_edge_loop             | 0   |        |             |      |         |         |
+|    add_ln154_fu_114_p2                      | -   |        | add_ln154   | add  | fabric  | 0       |
+|  + dut_Pipeline_Clear_loop                  | 0   |        |             |      |         |         |
+|    add_ln173_fu_234_p2                      | -   |        | add_ln173   | add  | fabric  | 0       |
+|  + dut_Pipeline_Queue_loop_Edge_loop        | 0   |        |             |      |         |         |
+|    add_ln209_1_fu_333_p2                    | -   |        | add_ln209_1 | add  | fabric  | 0       |
+|    add_ln209_fu_345_p2                      | -   |        | add_ln209   | add  | fabric  | 0       |
+|    add_ln232_fu_468_p2                      | -   |        | add_ln232   | add  | fabric  | 0       |
+|    add_ln233_fu_398_p2                      | -   |        | add_ln233   | add  | fabric  | 0       |
+|    sub_ln233_fu_428_p2                      | -   |        | sub_ln233   | sub  | fabric  | 0       |
+|    add_ln238_fu_457_p2                      | -   |        | add_ln238   | add  | fabric  | 0       |
+|    add_ln255_fu_514_p2                      | -   |        | add_ln255   | add  | fabric  | 0       |
+|    add_ln244_fu_556_p2                      | -   |        | add_ln244   | add  | fabric  | 0       |
+|    add_ln346_fu_674_p2                      | -   |        | add_ln346   | add  | fabric  | 0       |
+|    sub_ln1512_fu_688_p2                     | -   |        | sub_ln1512  | sub  | fabric  | 0       |
+|    result_V_2_fu_756_p2                     | -   |        | result_V_2  | sub  | fabric  | 0       |
+|    add_ln255_1_fu_610_p2                    | -   |        | add_ln255_1 | add  | fabric  | 0       |
+|    add_ln256_fu_615_p2                      | -   |        | add_ln256   | add  | fabric  | 0       |
+|    k_1_fu_404_p2                            | -   |        | k_1         | add  | fabric  | 0       |
+|  + dut_Pipeline_Dequeue_loop_Computing_loop | 5   |        |             |      |         |         |
+|    add_ln265_1_fu_299_p2                    | -   |        | add_ln265_1 | add  | fabric  | 0       |
+|    add_ln265_fu_275_p2                      | -   |        | add_ln265   | add  | fabric  | 0       |
+|    fdiv_32ns_32ns_32_12_no_dsp_1_U39        | -   |        | div         | fdiv | fabric  | 11      |
+|    fadd_32ns_32ns_32_7_full_dsp_1_U37       | 2   |        | add3        | fadd | fulldsp | 6       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U38        | 3   |        | mul         | fmul | maxdsp  | 3       |
+|    add_ln269_fu_448_p2                      | -   |        | add_ln269   | add  | fabric  | 0       |
+|  + dut_Pipeline_Output_loop                 | 0   |        |             |      |         |         |
+|    add_ln300_fu_117_p2                      | -   |        | add_ln300   | add  | fabric  | 0       |
++---------------------------------------------+-----+--------+-------------+------+---------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
++-------------------+------+------+--------+---------------+---------+------+---------+
+| Name              | BRAM | URAM | Pragma | Variable      | Storage | Impl | Latency |
++-------------------+------+------+--------+---------------+---------+------+---------+
+| + dut             | 35   | 3    |        |               |         |      |         |
+|   offset_buf_U    | 4    | -    |        | offset_buf    | ram_s2p | auto | 1       |
+|   btwn_buf_U      | -    | 1    |        | btwn_buf      | ram_1p  | auto | 1       |
+|   column_buf_U    | 8    | -    |        | column_buf    | ram_1p  | auto | 1       |
+|   dist_array_U    | 4    | -    |        | dist_array    | ram_s2p | auto | 1       |
+|   sigma_array_U   | -    | 1    |        | sigma_array   | ram_s2p | auto | 1       |
+|   travel_U        | 1    | -    |        | travel        | ram_1p  | auto | 1       |
+|   s_array_U       | 4    | -    |        | s_array       | ram_s2p | auto | 1       |
+|   p_index_array_U | 2    | -    |        | p_index_array | ram_s2p | auto | 1       |
+|   delta_array_U   | -    | 1    |        | delta_array   | ram_s2p | auto | 1       |
+|   q_array_U       | 4    | -    |        | q_array       | ram_s2p | auto | 1       |
+|   p_array_U       | 8    | -    |        | p_array       | ram_1p  | auto | 1       |
++-------------------+------+------+--------+---------------+---------+------+---------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+| Type       | Options                                                                                                                                                                                   | Location                          |
++------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+| interface  | m_axi offset = slave latency = 32 num_write_outstanding = 1 num_read_outstanding = 16 max_write_burst_length = 2 max_read_burst_length = 256 bundle = gmem0 port = offset depth = MEMSIZE | top.cpp:19 in dut                 |
+| interface  | m_axi offset = slave latency = 32 num_write_outstanding = 1 num_read_outstanding = 16 max_write_burst_length = 2 max_read_burst_length = 256 bundle = gmem1 port = column depth = MEMSIZE | top.cpp:22 in dut                 |
+| interface  | m_axi offset = slave latency = 32 num_write_outstanding = 1 num_read_outstanding = 16 max_write_burst_length = 2 max_read_burst_length = 256 bundle = gmem3 port = btwn depth = MEMSIZE   | top.cpp:25 in dut                 |
+| interface  | m_axi offset = slave latency = 32 num_write_outstanding = 1 num_read_outstanding = 16 max_write_burst_length = 2 max_read_burst_length = 256 bundle = gmem6 port = tmp0 depth = MEMSIZE   | top.cpp:28 in dut                 |
+| interface  | m_axi offset = slave latency = 32 num_write_outstanding = 1 num_read_outstanding = 16 max_write_burst_length = 2 max_read_burst_length = 256 bundle = gmem7 port = tmp1 depth = MEMSIZE   | top.cpp:31 in dut                 |
+| interface  | m_axi offset = slave latency = 32 num_write_outstanding = 1 num_read_outstanding = 16 max_write_burst_length = 2 max_read_burst_length = 256 bundle = gmem8 port = tmp2 depth = MEMSIZE   | top.cpp:34 in dut                 |
+| interface  | m_axi offset = slave latency = 32 num_write_outstanding = 1 num_read_outstanding = 16 max_write_burst_length = 2 max_read_burst_length = 256 bundle = gmem9 port = tmp3 depth = MEMSIZE   | top.cpp:37 in dut                 |
+| pipeline   | II=1                                                                                                                                                                                      | top.cpp:175 in dut                |
+| dependence | variable=s_array type=inter false                                                                                                                                                         | top.cpp:176 in dut, s_array       |
+| dependence | variable=sigma_array type=inter false                                                                                                                                                     | top.cpp:177 in dut, sigma_array   |
+| dependence | variable=p_index_array type=inter false                                                                                                                                                   | top.cpp:178 in dut, p_index_array |
+| dependence | variable=dist_array type=inter false                                                                                                                                                      | top.cpp:179 in dut, dist_array    |
+| dependence | variable=q_array type=inter false                                                                                                                                                         | top.cpp:180 in dut, q_array       |
+| dependence | variable=delta_array type=inter false                                                                                                                                                     | top.cpp:181 in dut, delta_array   |
+| dependence | variable=travel type=inter false                                                                                                                                                          | top.cpp:182 in dut, travel        |
+| pipeline   |                                                                                                                                                                                           | top.cpp:218 in dut                |
+| dependence | variable=offset_buf type=inter false                                                                                                                                                      | top.cpp:219 in dut, offset_buf    |
+| dependence | variable=column_buf type=inter false                                                                                                                                                      | top.cpp:220 in dut, column_buf    |
+| dependence | variable=q_array type=inter false                                                                                                                                                         | top.cpp:221 in dut, q_array       |
+| dependence | variable=dist_array type=inter false                                                                                                                                                      | top.cpp:222 in dut, dist_array    |
+| dependence | variable=sigma_array type=inter false                                                                                                                                                     | top.cpp:223 in dut, sigma_array   |
+| dependence | variable=p_index_array type=inter false                                                                                                                                                   | top.cpp:224 in dut, p_index_array |
+| dependence | variable=travel type=inter false                                                                                                                                                          | top.cpp:225 in dut, travel        |
+| pipeline   |                                                                                                                                                                                           | top.cpp:270 in dut                |
+| dependence | variable=btwn_buf type=inter false                                                                                                                                                        | top.cpp:271 in dut, btwn_buf      |
+| dependence | variable=delta_array type=inter false                                                                                                                                                     | top.cpp:272 in dut, delta_array   |
+| dependence | variable=sigma_array type=inter false                                                                                                                                                     | top.cpp:273 in dut, sigma_array   |
+| pipeline   | II=1                                                                                                                                                                                      | top.cpp:301 in dut                |
+| dependence | variable=btwn type=inter false                                                                                                                                                            | top.cpp:302 in dut, btwn          |
++------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+
+
+

@@ -1,0 +1,53 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (lin64) Build 3526262 Mon Apr 18 15:47:01 MDT 2022
+| Date         : Sun Nov 13 10:48:57 2022
+| Host         : HLS02 running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_qor_assessment -file qor_assessment_post_route_design.rpt
+| Design       : level0_wrapper
+| Device       : xcu50-fsvh2104-2-e
+| Speed File   : -2
+| Design State : Routed
+------------------------------------------------------------------------------------
+
+Report QoR Assessment
+
+Table of Contents
+-----------------
+1. Overall Assessment Summary for level0_i/ulp
+2. QoR Assessment Details for level0_i/ulp
+3. Methodology Check Details for level0_i/ulp
+
+1. Overall Assessment Summary for level0_i/ulp
+----------------------------------------------
+
++----------------------+--------------------------------------------------+
+| QoR Assessment Score | 5 - Design runs will meet timing                 |
++----------------------+--------------------------------------------------+
+| Flow Guidance        | Run report_methodology and fix or waive warnings |
++----------------------+--------------------------------------------------+
+
+
+2. QoR Assessment Details for level0_i/ulp
+------------------------------------------
+
++-------------+-----------+--------+------+-----------+--------+
+| Name        | Threshold | Actual | Used | Available | Status |
++-------------+-----------+--------+------+-----------+--------+
+| Utilization |           |        |      |           |     OK |
+| Clocking    |           |        |      |           |     OK |
+| Congestion  |           |        |      |           |     OK |
+| Timing      |           |        |      |           |     OK |
++-------------+-----------+--------+------+-----------+--------+
+
+
+3. Methodology Check Details for level0_i/ulp
+---------------------------------------------
+
++----------+-------------------+-------------+----------------------+
+| ID       | Description       | Criticality | Number of Violations |
++----------+-------------------+-------------+----------------------+
+| TIMING-9 | Unknown CDC Logic | Warning     | 1                    |
++----------+-------------------+-------------+----------------------+
+
+

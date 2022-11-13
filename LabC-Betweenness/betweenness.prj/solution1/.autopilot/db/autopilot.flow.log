@@ -1,0 +1,1814 @@
+INFO-FLOW: Workspace /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1 opened at Sun Nov 13 17:17:43 CST 2022
+Execute     ap_set_clock -name default -period 3.33 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.33ns.
+Execute     set_part xcu280-fsvh2892-2L-e 
+Execute       create_platform xcu280-fsvh2892-2L-e -board  
+DBG:HLSDevice: Trying to load device library: /tool/Xilinx/Vitis_HLS/2022.1/lib/lnx64.o/librdi_hlsvwrap.so
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: /tool/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xcu280-fsvh2892-2L-e'
+Command       create_platform done; 1.01 sec.
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 1.09 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -default_interface=kernel 
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+Execute     config_interface -default_interface=kernel 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+Execute     config_interface -m_axi_alignment_byte_size=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_latency=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+Execute     config_interface -m_axi_latency=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+Execute     config_interface -m_axi_max_widen_bitwidth=512 
+Execute     send_msg_by_id INFO @200-1464@%s config_rtl -register_reset_num=3 
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+Execute     config_rtl -register_reset_num=3 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -format=ip_catalog 
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+Execute     config_export -format=ip_catalog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -rtl=verilog 
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+Execute     config_export -rtl=verilog 
+Execute     send_msg_by_id INFO @200-1464@%s config_export -vivado_clock=3.33 
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=3.33
+Execute     config_export -vivado_clock=3.33 
+Command   open_solution done; 1.09 sec.
+Execute   set_part xcu280-fsvh2892-2L-e 
+INFO: [HLS 200-1510] Running: set_part xcu280-fsvh2892-2L-e 
+Execute     create_platform xcu280-fsvh2892-2L-e -board  
+Execute     source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Execute     ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Execute   create_clock -period 3.33 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 3.33 -name default 
+Execute   config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+Execute   config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+Execute   config_export -format ip_catalog -rtl verilog -vivado_clock 3.33 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 3.33 
+Execute   source ./betweenness.prj/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./betweenness.prj/solution1/directives.tcl
+Execute     set_directive_top -name dut dut 
+INFO: [HLS 200-1510] Running: set_directive_top -name dut dut 
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 1.461 GB.
+INFO: [HLS 200-10] Analyzing design file 'top.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling top.cpp as C++
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang top.cpp -foptimization-record-file=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -gcc-toolchain /tool/Xilinx/Vitis_HLS/2022.1/tps/lnx64/gcc-8.3.0 -fhls -fno-exceptions -E -I./. -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tool/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /tool/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -I /usr/include/x86_64-linux-gnu -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -hls-platform-db-name=/tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.cpp.clang.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.cpp.clang.err.log 
+INFO-FLOW: Done: GCC PP 39 time: 0.1 seconds per iteration
+Execute       set_directive_top dut -name=dut 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -hls-platform-db-name=/tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/clang.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 0.11 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/.systemc_flag -fix-errors /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  -directive=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/all.directive.json -fix-errors /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 0.14 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 0.2 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.clang-tidy.loop-label.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.clang-tidy.loop-label.err.log 
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp -I./. -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /tool/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I /tool/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.bc -hls-platform-db-name=/tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.clang.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 0.12 sec.
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1.19 seconds. CPU system time: 0.44 seconds. Elapsed time: 0.85 seconds; current allocated memory: 462.750 MB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc -args  "/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.g.bc"  
+Execute         ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top.g.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -args /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -args /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tool/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /tool/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed /tool/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsm_39.bc /tool/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libhlsmc++_39.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 1.58 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.58 sec.
+Execute       run_link_or_opt -opt -out /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dut -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=dut -reflow-float-conversion -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 0.56 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.56 sec.
+Execute       run_link_or_opt -out /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -args /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tool/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/llvm-link /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed /tool/Xilinx/Vitis_HLS/2022.1/lnx64/lib/libfloatconversion_39.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dut 
+Execute         ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_compile -instruction_warning_threshold 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_array_partition -throughput_driven 
+Execute       send_msg_by_id INFO @200-777@%s Vitis 
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+Execute       is_m_axi_addr64 
+Execute       get_clock_period -ns -default 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr /tool/Xilinx/Vitis_HLS/2022.1/lnx64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=dut -mllvm -hls-db-dir -mllvm /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/../../../kernel.xml -mllvm -top-io-mapping-info=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=true -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=64 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=512 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=64 -mllvm -no-unaligned-maxi-accesses=false -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -enable-reflow-vitis-flow-setting=true -x ir /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=/tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=virtexuplus_medium -device-resource-info=BRAM_4032.000000_DSP_9024.000000_FF_2607360.000000_LUT_1303680.000000_SLICE_162960.000000_SLR_3.000000_URAM_960.000000 > /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 0.32 sec.
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::fp_struct(float)' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::mantissa() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::expv() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'fp_struct<float>::__signbit() const' into 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:12:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, (ap_q_mode)6, float>(float, bool, hls::enable_if<std::numeric_limits<int>::is_signed, bool>::type)' into 'int generic_cast_IEEE754<int, float>(float, bool)' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/include/FloatingPoint/hls_case_IEEE754.h:116:0)
+INFO: [HLS 214-178] Inlining function 'int generic_cast_IEEE754<int, float>(float, bool)' into '__hls_fptosi_float_i32' (/wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/hlsmath/src/lib_floatconversion.cpp:51:0)
+INFO: [HLS 214-178] Inlining function '__hls_fptosi_float_i32' into 'dut(unsigned int, unsigned int, unsigned int*, unsigned int*, float*, unsigned int*, unsigned int*, unsigned int*, unsigned int*)' (top.cpp:15:0)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'Store_vertice_loop'(top.cpp:145:3) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (top.cpp:145:3)
+INFO: [HLS 214-115] Multiple burst reads of variable length and bit width 32 in loop 'Store_edge_loop'(top.cpp:154:3) has been inferred on bundle 'gmem1'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (top.cpp:154:3)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'Output_loop'(top.cpp:300:3) has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (top.cpp:300:3)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: copying raw kernel.xml: /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/../../../kernel.xml -> /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2.37 seconds. CPU system time: 0.31 seconds. Elapsed time: 2.68 seconds; current allocated memory: 463.535 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 463.535 MB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top dut -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.0.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 482.867 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.1.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 506.922 MB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.g.1.bc to /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.o.1.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'Store_vertice_loop' (top.cpp:145) in function 'dut' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Store_edge_loop' (top.cpp:154) in function 'dut' automatically.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'offset_buf' in function 'dut' (top.cpp:147:7).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'btwn_buf' in function 'dut' (top.cpp:149:9).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'p_array' in function 'dut' (top.cpp:288:19).
+Command         transform done; 0.12 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.19 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.22 seconds; current allocated memory: 553.230 MB.
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.o.2.bc -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Queue_loop' (top.cpp:209:14) in function 'dut'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:219:9) in loop 'Edge_loop' may become invalid because the loop was flattened with the outer loop 'Queue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:220:9) in loop 'Edge_loop' may become invalid because the loop was flattened with the outer loop 'Queue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:221:9) in loop 'Edge_loop' may become invalid because the loop was flattened with the outer loop 'Queue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:222:9) in loop 'Edge_loop' may become invalid because the loop was flattened with the outer loop 'Queue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:223:9) in loop 'Edge_loop' may become invalid because the loop was flattened with the outer loop 'Queue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:224:9) in loop 'Edge_loop' may become invalid because the loop was flattened with the outer loop 'Queue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:225:9) in loop 'Edge_loop' may become invalid because the loop was flattened with the outer loop 'Queue_loop'.
+INFO: [XFORM 203-541] Flattening a loop nest 'Dequeue_loop' (top.cpp:265:14) in function 'dut'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:271:9) in loop 'Computing_loop' may become invalid because the loop was flattened with the outer loop 'Dequeue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:272:9) in loop 'Computing_loop' may become invalid because the loop was flattened with the outer loop 'Dequeue_loop'.
+WARNING: [HLS 200-1946] Dependence pragma (top.cpp:273:9) in loop 'Computing_loop' may become invalid because the loop was flattened with the outer loop 'Dequeue_loop'.
+WARNING: [HLS 200-960] Cannot flatten loop 'Main_loop' (top.cpp:162:12) in function 'dut' more than one sub loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'offset_buf' (top.cpp:147:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'btwn_buf' (top.cpp:149:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'column_buf' (top.cpp:156:21)
+INFO: [HLS 200-472] Inferring partial write operation for 's_array' (top.cpp:185:13)
+INFO: [HLS 200-472] Inferring partial write operation for 'p_index_array' (top.cpp:186:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_array' (top.cpp:187:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'q_array' (top.cpp:190:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'q_array' (top.cpp:193:22)
+INFO: [HLS 200-472] Inferring partial write operation for 'dist_array' (top.cpp:196:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'sigma_array' (top.cpp:197:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'travel' (top.cpp:198:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'dist_array' (top.cpp:201:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'sigma_array' (top.cpp:202:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'travel' (top.cpp:203:21)
+INFO: [HLS 200-472] Inferring partial write operation for 's_array' (top.cpp:229:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'q_array' (top.cpp:243:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'dist_array' (top.cpp:245:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'travel' (top.cpp:247:25)
+INFO: [HLS 200-472] Inferring partial write operation for 'sigma_array' (top.cpp:252:30)
+INFO: [HLS 200-472] Inferring partial write operation for 'p_array' (top.cpp:255:39)
+INFO: [HLS 200-472] Inferring partial write operation for 'p_index_array' (top.cpp:256:32)
+INFO: [HLS 200-472] Inferring partial write operation for 'btwn_buf' (top.cpp:283:29)
+INFO: [HLS 200-472] Inferring partial write operation for 'delta_array' (top.cpp:291:30)
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 's_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sigma_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'p_index_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'dist_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'q_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'delta_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'travel'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'offset_buf'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'column_buf'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'q_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'dist_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sigma_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'p_index_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'travel'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'btwn_buf'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'delta_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'sigma_array'.
+WARNING: [ANALYSIS 214-52] Found false inter dependency for variable 'gmem3'.
+Command         transform done; 0.17 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.16 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 609.367 MB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 0.57 sec.
+Command     elaborate done; 4.11 sec.
+Execute     ap_eval exec zip -j /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'dut' ...
+Execute       ap_set_top_model dut 
+Execute       get_model_list dut -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model dut 
+Execute       preproc_iomode -model dut_Pipeline_Output_loop 
+Execute       preproc_iomode -model dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       preproc_iomode -model dut_Pipeline_Queue_loop_Edge_loop 
+Execute       preproc_iomode -model dut_Pipeline_Clear_loop 
+Execute       preproc_iomode -model dut_Pipeline_Store_edge_loop 
+Execute       preproc_iomode -model dut_Pipeline_Store_vertice_loop 
+Execute       get_model_list dut -filter all-wo-channel 
+INFO-FLOW: Model list for configure: dut_Pipeline_Store_vertice_loop dut_Pipeline_Store_edge_loop dut_Pipeline_Clear_loop dut_Pipeline_Queue_loop_Edge_loop dut_Pipeline_Dequeue_loop_Computing_loop dut_Pipeline_Output_loop dut
+INFO-FLOW: Configuring Module : dut_Pipeline_Store_vertice_loop ...
+Execute       set_default_model dut_Pipeline_Store_vertice_loop 
+Execute       apply_spec_resource_limit dut_Pipeline_Store_vertice_loop 
+INFO-FLOW: Configuring Module : dut_Pipeline_Store_edge_loop ...
+Execute       set_default_model dut_Pipeline_Store_edge_loop 
+Execute       apply_spec_resource_limit dut_Pipeline_Store_edge_loop 
+INFO-FLOW: Configuring Module : dut_Pipeline_Clear_loop ...
+Execute       set_default_model dut_Pipeline_Clear_loop 
+Execute       apply_spec_resource_limit dut_Pipeline_Clear_loop 
+INFO-FLOW: Configuring Module : dut_Pipeline_Queue_loop_Edge_loop ...
+Execute       set_default_model dut_Pipeline_Queue_loop_Edge_loop 
+Execute       apply_spec_resource_limit dut_Pipeline_Queue_loop_Edge_loop 
+INFO-FLOW: Configuring Module : dut_Pipeline_Dequeue_loop_Computing_loop ...
+Execute       set_default_model dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       apply_spec_resource_limit dut_Pipeline_Dequeue_loop_Computing_loop 
+INFO-FLOW: Configuring Module : dut_Pipeline_Output_loop ...
+Execute       set_default_model dut_Pipeline_Output_loop 
+Execute       apply_spec_resource_limit dut_Pipeline_Output_loop 
+INFO-FLOW: Configuring Module : dut ...
+Execute       set_default_model dut 
+Execute       apply_spec_resource_limit dut 
+INFO-FLOW: Model list for preprocess: dut_Pipeline_Store_vertice_loop dut_Pipeline_Store_edge_loop dut_Pipeline_Clear_loop dut_Pipeline_Queue_loop_Edge_loop dut_Pipeline_Dequeue_loop_Computing_loop dut_Pipeline_Output_loop dut
+INFO-FLOW: Preprocessing Module: dut_Pipeline_Store_vertice_loop ...
+Execute       set_default_model dut_Pipeline_Store_vertice_loop 
+Execute       cdfg_preprocess -model dut_Pipeline_Store_vertice_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Store_vertice_loop 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_Store_edge_loop ...
+Execute       set_default_model dut_Pipeline_Store_edge_loop 
+Execute       cdfg_preprocess -model dut_Pipeline_Store_edge_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Store_edge_loop 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_Clear_loop ...
+Execute       set_default_model dut_Pipeline_Clear_loop 
+Execute       cdfg_preprocess -model dut_Pipeline_Clear_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Clear_loop 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_Queue_loop_Edge_loop ...
+Execute       set_default_model dut_Pipeline_Queue_loop_Edge_loop 
+Execute       cdfg_preprocess -model dut_Pipeline_Queue_loop_Edge_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Queue_loop_Edge_loop 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_Dequeue_loop_Computing_loop ...
+Execute       set_default_model dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       cdfg_preprocess -model dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Dequeue_loop_Computing_loop 
+INFO-FLOW: Preprocessing Module: dut_Pipeline_Output_loop ...
+Execute       set_default_model dut_Pipeline_Output_loop 
+Execute       cdfg_preprocess -model dut_Pipeline_Output_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Output_loop 
+INFO-FLOW: Preprocessing Module: dut ...
+Execute       set_default_model dut 
+Execute       cdfg_preprocess -model dut 
+Execute       rtl_gen_preprocess dut 
+INFO-FLOW: Model list for synthesis: dut_Pipeline_Store_vertice_loop dut_Pipeline_Store_edge_loop dut_Pipeline_Clear_loop dut_Pipeline_Queue_loop_Edge_loop dut_Pipeline_Dequeue_loop_Computing_loop dut_Pipeline_Output_loop dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_Store_vertice_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_Store_vertice_loop 
+Execute       schedule -model dut_Pipeline_Store_vertice_loop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Store_vertice_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Store_vertice_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.06 seconds; current allocated memory: 610.660 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_Store_vertice_loop.
+Execute       set_default_model dut_Pipeline_Store_vertice_loop 
+Execute       bind -model dut_Pipeline_Store_vertice_loop 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 610.660 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_Store_vertice_loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_Store_edge_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_Store_edge_loop 
+Execute       schedule -model dut_Pipeline_Store_edge_loop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Store_edge_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'Store_edge_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 611.059 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_Store_edge_loop.
+Execute       set_default_model dut_Pipeline_Store_edge_loop 
+Execute       bind -model dut_Pipeline_Store_edge_loop 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 611.059 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_Store_edge_loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_Clear_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_Clear_loop 
+Execute       schedule -model dut_Pipeline_Clear_loop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Clear_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'Clear_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 611.484 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_Clear_loop.
+Execute       set_default_model dut_Pipeline_Clear_loop 
+Execute       bind -model dut_Pipeline_Clear_loop 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 611.484 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_Clear_loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_Queue_loop_Edge_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_Queue_loop_Edge_loop 
+Execute       schedule -model dut_Pipeline_Queue_loop_Edge_loop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Queue_loop_Edge_loop'.
+WARNING: [HLS 200-885] The II Violation in module 'dut_Pipeline_Queue_loop_Edge_loop' (loop 'Queue_loop_Edge_loop'): Unable to schedule 'load' operation ('dist_array_load_1', top.cpp:241) on array 'dist_array' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'dist_array'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 27, loop 'Queue_loop_Edge_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 613.242 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_Queue_loop_Edge_loop.
+Execute       set_default_model dut_Pipeline_Queue_loop_Edge_loop 
+Execute       bind -model dut_Pipeline_Queue_loop_Edge_loop 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.13 seconds. CPU system time: 0 seconds. Elapsed time: 0.13 seconds; current allocated memory: 613.242 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_Queue_loop_Edge_loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_Dequeue_loop_Computing_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       schedule -model dut_Pipeline_Dequeue_loop_Computing_loop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Dequeue_loop_Computing_loop'.
+WARNING: [HLS 200-885] The II Violation in module 'dut_Pipeline_Dequeue_loop_Computing_loop' (loop 'Dequeue_loop_Computing_loop'): Unable to schedule 'load' operation ('delta_array_load_1', top.cpp:290) on array 'delta_array' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'delta_array'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 37, loop 'Dequeue_loop_Computing_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 614.051 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_Dequeue_loop_Computing_loop.
+Execute       set_default_model dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       bind -model dut_Pipeline_Dequeue_loop_Computing_loop 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.14 seconds. CPU system time: 0 seconds. Elapsed time: 0.14 seconds; current allocated memory: 614.051 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_Dequeue_loop_Computing_loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut_Pipeline_Output_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut_Pipeline_Output_loop 
+Execute       schedule -model dut_Pipeline_Output_loop 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Output_loop'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'Output_loop'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 614.074 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.sched.adb -f 
+INFO-FLOW: Finish scheduling dut_Pipeline_Output_loop.
+Execute       set_default_model dut_Pipeline_Output_loop 
+Execute       bind -model dut_Pipeline_Output_loop 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 614.074 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.bind.adb -f 
+INFO-FLOW: Finish binding dut_Pipeline_Output_loop.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model dut 
+Execute       schedule -model dut 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 614.594 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.12 sec.
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.sched.adb -f 
+INFO-FLOW: Finish scheduling dut.
+Execute       set_default_model dut 
+Execute       bind -model dut 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.15 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.28 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 614.656 MB.
+Execute       syn_report -verbosereport -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.15 sec.
+Execute       db_write -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.bind.adb -f 
+INFO-FLOW: Finish binding dut.
+Execute       get_model_list dut -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess dut_Pipeline_Store_vertice_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Store_edge_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Clear_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Queue_loop_Edge_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       rtl_gen_preprocess dut_Pipeline_Output_loop 
+Execute       rtl_gen_preprocess dut 
+INFO-FLOW: Model list for RTL generation: dut_Pipeline_Store_vertice_loop dut_Pipeline_Store_edge_loop dut_Pipeline_Clear_loop dut_Pipeline_Queue_loop_Edge_loop dut_Pipeline_Dequeue_loop_Computing_loop dut_Pipeline_Output_loop dut
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_Store_vertice_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_Store_vertice_loop -top_prefix dut_ -sub_prefix dut_ -mg_file /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dut_Pipeline_Store_vertice_loop' pipeline 'Store_vertice_loop' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_vertice_loop/m_axi_gmem0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_Store_vertice_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.18 seconds; current allocated memory: 615.301 MB.
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_Store_vertice_loop -style xilinx -f -lang vhdl -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/vhdl/dut_dut_Pipeline_Store_vertice_loop 
+Execute       gen_rtl dut_Pipeline_Store_vertice_loop -style xilinx -f -lang vlog -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/verilog/dut_dut_Pipeline_Store_vertice_loop 
+Execute       syn_report -csynth -model dut_Pipeline_Store_vertice_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Store_vertice_loop_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_Store_vertice_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Store_vertice_loop_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_Store_vertice_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_Store_vertice_loop -f -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.adb 
+Execute       db_write -model dut_Pipeline_Store_vertice_loop -bindview -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_Store_vertice_loop -p /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_Store_edge_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_Store_edge_loop -top_prefix dut_ -sub_prefix dut_ -mg_file /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dut_Pipeline_Store_edge_loop' pipeline 'Store_edge_loop' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Store_edge_loop/m_axi_gmem1_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_Store_edge_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 616.605 MB.
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_Store_edge_loop -style xilinx -f -lang vhdl -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/vhdl/dut_dut_Pipeline_Store_edge_loop 
+Execute       gen_rtl dut_Pipeline_Store_edge_loop -style xilinx -f -lang vlog -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/verilog/dut_dut_Pipeline_Store_edge_loop 
+Execute       syn_report -csynth -model dut_Pipeline_Store_edge_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Store_edge_loop_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_Store_edge_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Store_edge_loop_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_Store_edge_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_Store_edge_loop -f -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.adb 
+Execute       db_write -model dut_Pipeline_Store_edge_loop -bindview -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_Store_edge_loop -p /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_Clear_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_Clear_loop -top_prefix dut_ -sub_prefix dut_ -mg_file /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_Clear_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 617.668 MB.
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_Clear_loop -style xilinx -f -lang vhdl -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/vhdl/dut_dut_Pipeline_Clear_loop 
+Execute       gen_rtl dut_Pipeline_Clear_loop -style xilinx -f -lang vlog -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/verilog/dut_dut_Pipeline_Clear_loop 
+Execute       syn_report -csynth -model dut_Pipeline_Clear_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Clear_loop_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_Clear_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Clear_loop_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_Clear_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_Clear_loop -f -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.adb 
+Execute       db_write -model dut_Pipeline_Clear_loop -bindview -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_Clear_loop -p /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_Queue_loop_Edge_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_Queue_loop_Edge_loop -top_prefix dut_ -sub_prefix dut_ -mg_file /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'num_edge' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'base_edge' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dist_tmp' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sigma_tmp_v' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'q_index_tmp' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'dist_tmp_w' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dut_Pipeline_Queue_loop_Edge_loop' pipeline 'Queue_loop_Edge_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_Queue_loop_Edge_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.09 seconds; current allocated memory: 620.105 MB.
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_Queue_loop_Edge_loop -style xilinx -f -lang vhdl -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/vhdl/dut_dut_Pipeline_Queue_loop_Edge_loop 
+Execute       gen_rtl dut_Pipeline_Queue_loop_Edge_loop -style xilinx -f -lang vlog -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/verilog/dut_dut_Pipeline_Queue_loop_Edge_loop 
+Execute       syn_report -csynth -model dut_Pipeline_Queue_loop_Edge_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Queue_loop_Edge_loop_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_Queue_loop_Edge_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Queue_loop_Edge_loop_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_Queue_loop_Edge_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.12 sec.
+Execute       db_write -model dut_Pipeline_Queue_loop_Edge_loop -f -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.adb 
+Execute       db_write -model dut_Pipeline_Queue_loop_Edge_loop -bindview -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_Queue_loop_Edge_loop -p /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_Dequeue_loop_Computing_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_Dequeue_loop_Computing_loop -top_prefix dut_ -sub_prefix dut_ -mg_file /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'delta_tmp' is power-on initialization.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dut_Pipeline_Dequeue_loop_Computing_loop' pipeline 'Dequeue_loop_Computing_loop' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fdiv_32ns_32ns_32_12_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_Dequeue_loop_Computing_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.29 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.29 seconds; current allocated memory: 624.191 MB.
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_Dequeue_loop_Computing_loop -style xilinx -f -lang vhdl -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/vhdl/dut_dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       gen_rtl dut_Pipeline_Dequeue_loop_Computing_loop -style xilinx -f -lang vlog -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/verilog/dut_dut_Pipeline_Dequeue_loop_Computing_loop 
+Execute       syn_report -csynth -model dut_Pipeline_Dequeue_loop_Computing_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Dequeue_loop_Computing_loop_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_Dequeue_loop_Computing_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Dequeue_loop_Computing_loop_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_Dequeue_loop_Computing_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.12 sec.
+Execute       db_write -model dut_Pipeline_Dequeue_loop_Computing_loop -f -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.adb 
+Execute       db_write -model dut_Pipeline_Dequeue_loop_Computing_loop -bindview -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_Dequeue_loop_Computing_loop -p /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut_Pipeline_Output_loop' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut_Pipeline_Output_loop -top_prefix dut_ -sub_prefix dut_ -mg_file /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'dut_Pipeline_Output_loop' pipeline 'Output_loop' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut_Pipeline_Output_loop/m_axi_gmem3_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut_Pipeline_Output_loop'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 626.781 MB.
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut_Pipeline_Output_loop -style xilinx -f -lang vhdl -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/vhdl/dut_dut_Pipeline_Output_loop 
+Execute       gen_rtl dut_Pipeline_Output_loop -style xilinx -f -lang vlog -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/verilog/dut_dut_Pipeline_Output_loop 
+Execute       syn_report -csynth -model dut_Pipeline_Output_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Output_loop_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut_Pipeline_Output_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_Pipeline_Output_loop_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut_Pipeline_Output_loop -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -model dut_Pipeline_Output_loop -f -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.adb 
+Execute       db_write -model dut_Pipeline_Output_loop -bindview -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut_Pipeline_Output_loop -p /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model dut -top_prefix  -sub_prefix dut_ -mg_file /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem1' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem8' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/gmem9' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/numVert' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/numEdge' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/offset' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/column' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/btwn' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/tmp0' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/tmp1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/tmp2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'dut/tmp3' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'dut' to 's_axilite & ap_ctrl_chain'.
+WARNING: [RTGEN 206-101] Register 'q_index' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'v' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'w' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'sigma_tmp' is power-on initialization.
+INFO: [RTGEN 206-100] Bundling port 'numVert', 'numEdge', 'offset', 'column', 'btwn', 'tmp0', 'tmp1', 'tmp2', 'tmp3' to AXI-Lite port control.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_AWUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_WVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_WVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_WREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_WDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_WDATA' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_WSTRB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_WLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_WLAST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_WID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_WID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_WUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_WUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_ARUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_RVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_RREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_RREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_RDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_RLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_RID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_RUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_RRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_BVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_BREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem6_BREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_BRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_BID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem6_BUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_AWUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_WVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_WVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_WREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_WDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_WDATA' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_WSTRB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_WLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_WLAST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_WID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_WID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_WUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_WUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_ARUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_RVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_RREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_RREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_RDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_RLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_RID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_RUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_RRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_BVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_BREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem7_BREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_BRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_BID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem7_BUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_AWUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_WVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_WVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_WREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_WDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_WDATA' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_WSTRB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_WLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_WLAST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_WID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_WID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_WUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_WUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_ARUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_RVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_RREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_RREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_RDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_RLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_RID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_RUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_RRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_BVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_BREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem8_BREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_BRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_BID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem8_BUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_AWUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_WVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_WVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_WREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_WDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_WDATA' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_WSTRB' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_WLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_WLAST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_WID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_WID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_WUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_WUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARADDR' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARID' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARLEN' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARSIZE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARBURST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARLOCK' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARCACHE' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARPROT' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARQOS' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARREGION' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_ARUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_RREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RDATA' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BVALID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BREADY' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_BREADY' to 0.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BRESP' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BID' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BUSER' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_7_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sitofp_32ns_32_5_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dut'.
+Command       create_rtl_model done; 0.72 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.71 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.76 seconds; current allocated memory: 633.023 MB.
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       gen_rtl dut -istop -style xilinx -f -lang vhdl -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/vhdl/dut 
+Execute       gen_rtl dut -istop -style xilinx -f -lang vlog -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/verilog/dut 
+Execute       syn_report -csynth -model dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/dut_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.2 sec.
+Execute       db_write -model dut -f -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.adb 
+Execute       db_write -model dut -bindview -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info dut -p /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut 
+Execute       export_constraint_db -f -tool general -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.constraint.tcl 
+Execute       syn_report -designview -model dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.design.xml 
+Command       syn_report done; 0.22 sec.
+Execute       syn_report -csynthDesign -model dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model dut -o /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks dut 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain dut 
+INFO-FLOW: Model list for RTL component generation: dut_Pipeline_Store_vertice_loop dut_Pipeline_Store_edge_loop dut_Pipeline_Clear_loop dut_Pipeline_Queue_loop_Edge_loop dut_Pipeline_Dequeue_loop_Computing_loop dut_Pipeline_Output_loop dut
+INFO-FLOW: Handling components in module [dut_Pipeline_Store_vertice_loop] ... 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_Store_edge_loop] ... 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_Clear_loop] ... 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_Queue_loop_Edge_loop] ... 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_Dequeue_loop_Computing_loop] ... 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.compgen.tcl 
+INFO-FLOW: Found component dut_fmul_32ns_32ns_32_4_max_dsp_1.
+INFO-FLOW: Append model dut_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: Found component dut_fdiv_32ns_32ns_32_12_no_dsp_1.
+INFO-FLOW: Append model dut_fdiv_32ns_32ns_32_12_no_dsp_1
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut_Pipeline_Output_loop] ... 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.compgen.tcl 
+INFO-FLOW: Found component dut_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [dut] ... 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.compgen.tcl 
+INFO-FLOW: Found component dut_fadd_32ns_32ns_32_7_full_dsp_1.
+INFO-FLOW: Append model dut_fadd_32ns_32ns_32_7_full_dsp_1
+INFO-FLOW: Found component dut_sitofp_32ns_32_5_no_dsp_1.
+INFO-FLOW: Append model dut_sitofp_32ns_32_5_no_dsp_1
+INFO-FLOW: Found component dut_offset_buf_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_offset_buf_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_btwn_buf_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_btwn_buf_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_column_buf_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_column_buf_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_sigma_array_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_sigma_array_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_travel_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_travel_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_p_index_array_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_p_index_array_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_q_array_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_q_array_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_p_array_RAM_AUTO_1R1W.
+INFO-FLOW: Append model dut_p_array_RAM_AUTO_1R1W
+INFO-FLOW: Found component dut_gmem0_m_axi.
+INFO-FLOW: Append model dut_gmem0_m_axi
+INFO-FLOW: Found component dut_gmem1_m_axi.
+INFO-FLOW: Append model dut_gmem1_m_axi
+INFO-FLOW: Found component dut_gmem3_m_axi.
+INFO-FLOW: Append model dut_gmem3_m_axi
+INFO-FLOW: Found component dut_control_s_axi.
+INFO-FLOW: Append model dut_control_s_axi
+INFO-FLOW: Append model dut_Pipeline_Store_vertice_loop
+INFO-FLOW: Append model dut_Pipeline_Store_edge_loop
+INFO-FLOW: Append model dut_Pipeline_Clear_loop
+INFO-FLOW: Append model dut_Pipeline_Queue_loop_Edge_loop
+INFO-FLOW: Append model dut_Pipeline_Dequeue_loop_Computing_loop
+INFO-FLOW: Append model dut_Pipeline_Output_loop
+INFO-FLOW: Append model dut
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_fmul_32ns_32ns_32_4_max_dsp_1 dut_fdiv_32ns_32ns_32_12_no_dsp_1 dut_flow_control_loop_pipe_sequential_init dut_flow_control_loop_pipe_sequential_init dut_fadd_32ns_32ns_32_7_full_dsp_1 dut_sitofp_32ns_32_5_no_dsp_1 dut_offset_buf_RAM_AUTO_1R1W dut_btwn_buf_RAM_AUTO_1R1W dut_column_buf_RAM_AUTO_1R1W dut_sigma_array_RAM_AUTO_1R1W dut_travel_RAM_AUTO_1R1W dut_p_index_array_RAM_AUTO_1R1W dut_q_array_RAM_AUTO_1R1W dut_p_array_RAM_AUTO_1R1W dut_gmem0_m_axi dut_gmem1_m_axi dut_gmem3_m_axi dut_control_s_axi dut_Pipeline_Store_vertice_loop dut_Pipeline_Store_edge_loop dut_Pipeline_Clear_loop dut_Pipeline_Queue_loop_Edge_loop dut_Pipeline_Dequeue_loop_Computing_loop dut_Pipeline_Output_loop dut
+INFO-FLOW: Generating /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_fmul_32ns_32ns_32_4_max_dsp_1
+INFO-FLOW: To file: write model dut_fdiv_32ns_32ns_32_12_no_dsp_1
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model dut_fadd_32ns_32ns_32_7_full_dsp_1
+INFO-FLOW: To file: write model dut_sitofp_32ns_32_5_no_dsp_1
+INFO-FLOW: To file: write model dut_offset_buf_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_btwn_buf_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_column_buf_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_sigma_array_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_travel_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_p_index_array_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_q_array_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_p_array_RAM_AUTO_1R1W
+INFO-FLOW: To file: write model dut_gmem0_m_axi
+INFO-FLOW: To file: write model dut_gmem1_m_axi
+INFO-FLOW: To file: write model dut_gmem3_m_axi
+INFO-FLOW: To file: write model dut_control_s_axi
+INFO-FLOW: To file: write model dut_Pipeline_Store_vertice_loop
+INFO-FLOW: To file: write model dut_Pipeline_Store_edge_loop
+INFO-FLOW: To file: write model dut_Pipeline_Clear_loop
+INFO-FLOW: To file: write model dut_Pipeline_Queue_loop_Edge_loop
+INFO-FLOW: To file: write model dut_Pipeline_Dequeue_loop_Computing_loop
+INFO-FLOW: To file: write model dut_Pipeline_Output_loop
+INFO-FLOW: To file: write model dut
+INFO-FLOW: Generating /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:PUTS: read_platform_lib /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source /tool/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=3.33 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/vhdl' dstVlogDir='/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/vlog' tclDir='/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db' modelList='dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_fmul_32ns_32ns_32_4_max_dsp_1
+dut_fdiv_32ns_32ns_32_12_no_dsp_1
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_fadd_32ns_32ns_32_7_full_dsp_1
+dut_sitofp_32ns_32_5_no_dsp_1
+dut_offset_buf_RAM_AUTO_1R1W
+dut_btwn_buf_RAM_AUTO_1R1W
+dut_column_buf_RAM_AUTO_1R1W
+dut_sigma_array_RAM_AUTO_1R1W
+dut_travel_RAM_AUTO_1R1W
+dut_p_index_array_RAM_AUTO_1R1W
+dut_q_array_RAM_AUTO_1R1W
+dut_p_array_RAM_AUTO_1R1W
+dut_gmem0_m_axi
+dut_gmem1_m_axi
+dut_gmem3_m_axi
+dut_control_s_axi
+dut_Pipeline_Store_vertice_loop
+dut_Pipeline_Store_edge_loop
+dut_Pipeline_Clear_loop
+dut_Pipeline_Queue_loop_Edge_loop
+dut_Pipeline_Dequeue_loop_Computing_loop
+dut_Pipeline_Output_loop
+dut
+' expOnly='0'
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.compgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.compgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.compgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.compgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.compgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.compgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'dut_offset_buf_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_btwn_buf_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_column_buf_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_sigma_array_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_travel_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_p_index_array_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_q_array_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'dut_p_array_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs with power-on initialization.
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute         ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute         source ./control.slave.tcl 
+Command       ap_source done; 0.2 sec.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1.02 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.03 seconds; current allocated memory: 638.664 MB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='dut_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute       get_config_op mul -impl 
+Execute       get_config_op mul -latency 
+Execute       get_config_op mul -precision 
+Execute       get_config_op add -impl 
+Execute       get_config_op add -latency 
+Execute       get_config_op add -precision 
+Execute       get_config_op sub -impl 
+Execute       get_config_op sub -latency 
+Execute       get_config_op sub -precision 
+Execute       get_config_op fadd -impl 
+Execute       get_config_op fadd -latency 
+Execute       get_config_op fadd -precision 
+Execute       get_config_op fsub -impl 
+Execute       get_config_op fsub -latency 
+Execute       get_config_op fsub -precision 
+Execute       get_config_op fdiv -impl 
+Execute       get_config_op fdiv -latency 
+Execute       get_config_op fdiv -precision 
+Execute       get_config_op fexp -impl 
+Execute       get_config_op fexp -latency 
+Execute       get_config_op fexp -precision 
+Execute       get_config_op flog -impl 
+Execute       get_config_op flog -latency 
+Execute       get_config_op flog -precision 
+Execute       get_config_op fmul -impl 
+Execute       get_config_op fmul -latency 
+Execute       get_config_op fmul -precision 
+Execute       get_config_op frsqrt -impl 
+Execute       get_config_op frsqrt -latency 
+Execute       get_config_op frsqrt -precision 
+Execute       get_config_op frecip -impl 
+Execute       get_config_op frecip -latency 
+Execute       get_config_op frecip -precision 
+Execute       get_config_op fsqrt -impl 
+Execute       get_config_op fsqrt -latency 
+Execute       get_config_op fsqrt -precision 
+Execute       get_config_op dadd -impl 
+Execute       get_config_op dadd -latency 
+Execute       get_config_op dadd -precision 
+Execute       get_config_op dsub -impl 
+Execute       get_config_op dsub -latency 
+Execute       get_config_op dsub -precision 
+Execute       get_config_op ddiv -impl 
+Execute       get_config_op ddiv -latency 
+Execute       get_config_op ddiv -precision 
+Execute       get_config_op dexp -impl 
+Execute       get_config_op dexp -latency 
+Execute       get_config_op dexp -precision 
+Execute       get_config_op dlog -impl 
+Execute       get_config_op dlog -latency 
+Execute       get_config_op dlog -precision 
+Execute       get_config_op dmul -impl 
+Execute       get_config_op dmul -latency 
+Execute       get_config_op dmul -precision 
+Execute       get_config_op drsqrt -impl 
+Execute       get_config_op drsqrt -latency 
+Execute       get_config_op drsqrt -precision 
+Execute       get_config_op drecip -impl 
+Execute       get_config_op drecip -latency 
+Execute       get_config_op drecip -precision 
+Execute       get_config_op dsqrt -impl 
+Execute       get_config_op dsqrt -latency 
+Execute       get_config_op dsqrt -precision 
+Execute       get_config_op hadd -impl 
+Execute       get_config_op hadd -latency 
+Execute       get_config_op hadd -precision 
+Execute       get_config_op hsub -impl 
+Execute       get_config_op hsub -latency 
+Execute       get_config_op hsub -precision 
+Execute       get_config_op hdiv -impl 
+Execute       get_config_op hdiv -latency 
+Execute       get_config_op hdiv -precision 
+Execute       get_config_op hmul -impl 
+Execute       get_config_op hmul -latency 
+Execute       get_config_op hmul -precision 
+Execute       get_config_op hsqrt -impl 
+Execute       get_config_op hsqrt -latency 
+Execute       get_config_op hsqrt -precision 
+Execute       get_config_op facc -impl 
+Execute       get_config_op facc -latency 
+Execute       get_config_op facc -precision 
+Execute       get_config_op fmacc -impl 
+Execute       get_config_op fmacc -latency 
+Execute       get_config_op fmacc -precision 
+Execute       get_config_op fmadd -impl 
+Execute       get_config_op fmadd -latency 
+Execute       get_config_op fmadd -precision 
+Execute       get_config_storage fifo -auto_srl_max_bits 
+Execute       get_config_storage fifo -auto_srl_max_depth 
+Execute       get_config_storage fifo -impl 
+Execute       get_solution -flow_target 
+Execute       get_config_array_partition -complete_threshold 
+Execute       get_config_array_partition -throughput_driven 
+Execute       get_config_compile -enable_auto_rewind 
+Execute       get_config_compile -ignore_long_run_time 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_compile -no_signed_zeros 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -unsafe_math_optimizations 
+Execute       get_config_dataflow -default_channel 
+Execute       get_config_dataflow -disable_fifo_sizing_opt 
+Execute       get_config_dataflow -fifo_depth 
+Execute       get_config_dataflow -override_user_fifo_depth 
+Execute       get_config_dataflow -scalar_fifo_depth 
+Execute       get_config_dataflow -start_fifo_depth 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_dataflow -strict_stable_sync 
+Execute       get_config_dataflow -task_level_fifo_depth 
+Execute       get_config_debug -directory 
+Execute       get_config_debug -enable 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -rtl 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_max_timing_paths 
+Execute       get_config_export -vivado_optimization_level 
+Execute       get_config_export -vivado_pblock 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_export -vivado_report_level 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_interface -clock_enable 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_interface -m_axi_addr64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_buffer_impl 
+Execute       get_config_interface -m_axi_conservative_mode 
+Execute       get_config_interface -m_axi_flush_mode 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -register_io 
+Execute       get_config_interface -s_axilite_auto_restart_counter 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       get_config_interface -s_axilite_mailbox 
+Execute       get_config_interface -s_axilite_status_regs 
+Execute       get_config_interface -s_axilite_sw_reset 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -header 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -mult_keep_attribute 
+Execute       get_config_rtl -register_all_io 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -reset 
+Execute       get_config_rtl -reset_async 
+Execute       get_config_rtl -reset_level 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_fmul_32ns_32ns_32_4_max_dsp_1
+dut_fdiv_32ns_32ns_32_12_no_dsp_1
+dut_flow_control_loop_pipe_sequential_init
+dut_flow_control_loop_pipe_sequential_init
+dut_fadd_32ns_32ns_32_7_full_dsp_1
+dut_sitofp_32ns_32_5_no_dsp_1
+dut_offset_buf_RAM_AUTO_1R1W
+dut_btwn_buf_RAM_AUTO_1R1W
+dut_column_buf_RAM_AUTO_1R1W
+dut_sigma_array_RAM_AUTO_1R1W
+dut_travel_RAM_AUTO_1R1W
+dut_p_index_array_RAM_AUTO_1R1W
+dut_q_array_RAM_AUTO_1R1W
+dut_p_array_RAM_AUTO_1R1W
+dut_gmem0_m_axi
+dut_gmem1_m_axi
+dut_gmem3_m_axi
+dut_control_s_axi
+dut_Pipeline_Store_vertice_loop
+dut_Pipeline_Store_edge_loop
+dut_Pipeline_Clear_loop
+dut_Pipeline_Queue_loop_Edge_loop
+dut_Pipeline_Dequeue_loop_Computing_loop
+dut_Pipeline_Output_loop
+dut
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.compgen.dataonly.tcl 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.compgen.dataonly.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.rtl_wrap.cfg.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       get_config_export -vendor 
+Execute       get_config_export -library 
+Execute       get_config_export -version 
+Execute       get_config_export -ipname 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_vertice_loop.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Store_edge_loop.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Clear_loop.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Queue_loop_Edge_loop.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Dequeue_loop_Computing_loop.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut_Pipeline_Output_loop.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.tbgen.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data names -quiet 
+Execute       ap_part_info -name xcu280-fsvh2892-2L-e -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/dut.constraint.tcl 
+Execute       sc_get_clocks dut 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/impl/misc/dut_fadd_32ns_32ns_32_7_full_dsp_1_ip.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/impl/misc/dut_fdiv_32ns_32ns_32_12_no_dsp_1_ip.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/impl/misc/dut_fmul_32ns_32ns_32_4_max_dsp_1_ip.tcl 
+Execute       source /home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/betweenness.prj/solution1/impl/misc/dut_sitofp_32ns_32_5_no_dsp_1_ip.tcl 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE dut LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem0_m_axi_U SOURCE {} VARIABLE {} MODULE dut LOOP {} BUNDLEDNAME gmem0 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem1_m_axi_U SOURCE {} VARIABLE {} MODULE dut LOOP {} BUNDLEDNAME gmem1 DSP 0 BRAM 0 URAM 0} {BINDTYPE adapter DISPLAY {bind_adapter axi_master} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME gmem3_m_axi_U SOURCE {} VARIABLE {} MODULE dut LOOP {} BUNDLEDNAME gmem3 DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST dut MODULE2INSTS {dut dut dut_Pipeline_Store_vertice_loop grp_dut_Pipeline_Store_vertice_loop_fu_259 dut_Pipeline_Store_edge_loop grp_dut_Pipeline_Store_edge_loop_fu_272 dut_Pipeline_Clear_loop grp_dut_Pipeline_Clear_loop_fu_282 dut_Pipeline_Queue_loop_Edge_loop grp_dut_Pipeline_Queue_loop_Edge_loop_fu_303 dut_Pipeline_Dequeue_loop_Computing_loop grp_dut_Pipeline_Dequeue_loop_Computing_loop_fu_345 dut_Pipeline_Output_loop grp_dut_Pipeline_Output_loop_fu_371} INST2MODULE {dut dut grp_dut_Pipeline_Store_vertice_loop_fu_259 dut_Pipeline_Store_vertice_loop grp_dut_Pipeline_Store_edge_loop_fu_272 dut_Pipeline_Store_edge_loop grp_dut_Pipeline_Clear_loop_fu_282 dut_Pipeline_Clear_loop grp_dut_Pipeline_Queue_loop_Edge_loop_fu_303 dut_Pipeline_Queue_loop_Edge_loop grp_dut_Pipeline_Dequeue_loop_Computing_loop_fu_345 dut_Pipeline_Dequeue_loop_Computing_loop grp_dut_Pipeline_Output_loop_fu_371 dut_Pipeline_Output_loop} INSTDATA {dut {DEPTH 1 CHILDREN {grp_dut_Pipeline_Store_vertice_loop_fu_259 grp_dut_Pipeline_Store_edge_loop_fu_272 grp_dut_Pipeline_Clear_loop_fu_282 grp_dut_Pipeline_Queue_loop_Edge_loop_fu_303 grp_dut_Pipeline_Dequeue_loop_Computing_loop_fu_345 grp_dut_Pipeline_Output_loop_fu_371}} grp_dut_Pipeline_Store_vertice_loop_fu_259 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_Store_edge_loop_fu_272 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_Clear_loop_fu_282 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_Queue_loop_Edge_loop_fu_303 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_Dequeue_loop_Computing_loop_fu_345 {DEPTH 2 CHILDREN {}} grp_dut_Pipeline_Output_loop_fu_371 {DEPTH 2 CHILDREN {}}} MODULEDATA {dut_Pipeline_Store_vertice_loop {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln145_fu_140_p2 SOURCE top.cpp:145 VARIABLE add_ln145 LOOP Store_vertice_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_Store_edge_loop {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln154_fu_114_p2 SOURCE top.cpp:154 VARIABLE add_ln154 LOOP Store_edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_Clear_loop {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln173_fu_234_p2 SOURCE top.cpp:173 VARIABLE add_ln173 LOOP Clear_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_Queue_loop_Edge_loop {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln209_1_fu_333_p2 SOURCE top.cpp:209 VARIABLE add_ln209_1 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln209_fu_345_p2 SOURCE top.cpp:209 VARIABLE add_ln209 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln232_fu_468_p2 SOURCE top.cpp:232 VARIABLE add_ln232 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln233_fu_398_p2 SOURCE top.cpp:233 VARIABLE add_ln233 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln233_fu_428_p2 SOURCE top.cpp:233 VARIABLE sub_ln233 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln238_fu_457_p2 SOURCE top.cpp:238 VARIABLE add_ln238 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln255_fu_514_p2 SOURCE top.cpp:255 VARIABLE add_ln255 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln244_fu_556_p2 SOURCE top.cpp:244 VARIABLE add_ln244 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln346_fu_674_p2 SOURCE /wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/src/hls/utils/x_hls_utils.h:346 VARIABLE add_ln346 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln1512_fu_688_p2 SOURCE /wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files/ap_fixed_base.h:1512 VARIABLE sub_ln1512 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME result_V_2_fu_756_p2 SOURCE /wrk/ci/prod/2022.1/rdi_builds/continuous/2022_04_18_3526262/src/shared/hls/clib/include/header_files/ap_fixed_base.h:813 VARIABLE result_V_2 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln255_1_fu_610_p2 SOURCE top.cpp:255 VARIABLE add_ln255_1 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln256_fu_615_p2 SOURCE top.cpp:256 VARIABLE add_ln256 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME k_1_fu_404_p2 SOURCE top.cpp:217 VARIABLE k_1 LOOP Queue_loop_Edge_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut_Pipeline_Dequeue_loop_Computing_loop {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln265_1_fu_299_p2 SOURCE top.cpp:265 VARIABLE add_ln265_1 LOOP Dequeue_loop_Computing_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln265_fu_275_p2 SOURCE top.cpp:265 VARIABLE add_ln265 LOOP Dequeue_loop_Computing_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 11 OPTYPE fdiv PRAGMA {} RTLNAME fdiv_32ns_32ns_32_12_no_dsp_1_U39 SOURCE top.cpp:289 VARIABLE div LOOP Dequeue_loop_Computing_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op fdiv}} {BINDTYPE op ID {} IMPL fulldsp LATENCY 6 OPTYPE fadd PRAGMA {} RTLNAME fadd_32ns_32ns_32_7_full_dsp_1_U37 SOURCE top.cpp:291 VARIABLE add3 LOOP Dequeue_loop_Computing_loop BUNDLEDNAME {} DSP 2 BRAM 0 URAM 0 DISPNAME {bind_op fadd}} {BINDTYPE op ID {} IMPL maxdsp LATENCY 3 OPTYPE fmul PRAGMA {} RTLNAME fmul_32ns_32ns_32_4_max_dsp_1_U38 SOURCE top.cpp:291 VARIABLE mul LOOP Dequeue_loop_Computing_loop BUNDLEDNAME {} DSP 3 BRAM 0 URAM 0 DISPNAME {bind_op fmul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln269_fu_448_p2 SOURCE top.cpp:269 VARIABLE add_ln269 LOOP Dequeue_loop_Computing_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 5 BRAM 0 URAM 0}} dut_Pipeline_Output_loop {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln300_fu_117_p2 SOURCE top.cpp:300 VARIABLE add_ln300 LOOP Output_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} dut {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_fu_394_p2 SOURCE top.cpp:6 VARIABLE add LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln145_fu_399_p2 SOURCE top.cpp:145 VARIABLE add_ln145 LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_3_fu_489_p2 SOURCE top.cpp:162 VARIABLE i_3 LOOP Main_loop BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME offset_buf_U SOURCE {} VARIABLE offset_buf LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME btwn_buf_U SOURCE {} VARIABLE btwn_buf LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 1 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME column_buf_U SOURCE {} VARIABLE column_buf LOOP {} BUNDLEDNAME {} DSP 0 BRAM 8 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME dist_array_U SOURCE {} VARIABLE dist_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME sigma_array_U SOURCE {} VARIABLE sigma_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 1 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME travel_U SOURCE {} VARIABLE travel LOOP {} BUNDLEDNAME {} DSP 0 BRAM 1 URAM 0 DISPNAME {bind_storage ram_1p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME s_array_U SOURCE {} VARIABLE s_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME p_index_array_U SOURCE {} VARIABLE p_index_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 2 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME delta_array_U SOURCE {} VARIABLE delta_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 0 URAM 1 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_s2p PRAGMA {} RTLNAME q_array_U SOURCE {} VARIABLE q_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 4 URAM 0 DISPNAME {bind_storage ram_s2p}} {BINDTYPE storage ID {} IMPL auto LATENCY 1 OPTYPE ram_1p PRAGMA {} RTLNAME p_array_U SOURCE {} VARIABLE p_array LOOP {} BUNDLEDNAME {} DSP 0 BRAM 8 URAM 0 DISPNAME {bind_storage ram_1p}}} AREA {DSP 7 BRAM 35 URAM 3}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+Execute       send_msg_by_id INFO @200-1603@%s  
+INFO: [HLS 200-1603] Design has inferred MAXI bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.42 seconds; current allocated memory: 653.676 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for dut.
+INFO: [VLOG 209-307] Generating Verilog RTL for dut.
+Execute       syn_report -model dut -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 411.37 MHz
+Command     autosyn done; 5.46 sec.
+Command   csynth_design done; 9.6 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 9.45 seconds. CPU system time: 0.95 seconds. Elapsed time: 9.6 seconds; current allocated memory: -842.633 MB.
+Command ap_source done; 10.82 sec.
+Execute cleanup_all 

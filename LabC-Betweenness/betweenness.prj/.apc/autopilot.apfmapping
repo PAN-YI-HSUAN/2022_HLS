@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top.cpp" path="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/top.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="small-csr-indicesweights.mtx" path="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/data/small-csr-indicesweights.mtx"/>
+    <originFiles name="small-csr-offset.mtx" path="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/data/small-csr-offset.mtx"/>
+    <originFiles name="large-csr-indicesweights.mtx" path="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/data/large-csr-indicesweights.mtx"/>
+    <originFiles name="large-csr-offset.mtx" path="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/data/large-csr-offset.mtx"/>
+    <originFiles name="test.cpp" path="/home/yhp/Documents/Class/111-1_HLS/LabC/ccc/problems/betweenness/test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

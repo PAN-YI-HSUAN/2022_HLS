@@ -1,0 +1,36 @@
+
+--------------------- Betweenness -----------------
+Found Platform
+Platform Name: Xilinx
+Info: Context created
+Info: Command queue created
+Found Device=xilinx_u50_gen3x16_xdma_base_5
+INFO: Importing ./build_dir.hw.u50/dut.xclbin
+Loading: './build_dir.hw.u50/dut.xclbin'
+Info: Program created
+Info: Program created
+kernel has been created
+graph loading ...
+kernel start------
+  vertex number=1015 edge number=11003
+Finish set kernel
+Finish set kernel1
+Finish set kernel2
+Finish set kernel3
+Finish set kernel4
+INFO: Finish kernel execution
+INFO: Finish E2E execution
+-------------------------------------------------------
+INFO: Data transfer from host to device: 327 us
+-------------------------------------------------------
+INFO: Kernel1 Data transfer from device to host: 413 us
+-------------------------------------------------------
+INFO: Kernel1 execution: 1.5668e+06 us
+-------------------------------------------------------
+INFO: kernel total execution: 1566802 us
+-------------------------------------------------------
+INFO: FPGA execution time:1674985 us
+-------------------------------------------------------
+Warning: using default memory size (100000xsizeof(unsigned)) for tmp0, tmp1, tmp2, tmp3. Define INTERFACE_MEMSIZE in the top.hpp & top.cpp for customize memory size.
+graph loading for betweenness golden...
+f936ed83 Top 1015 vertices are the same with golden.

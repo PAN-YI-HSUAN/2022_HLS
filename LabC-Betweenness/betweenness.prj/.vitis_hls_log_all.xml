@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BUSER' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.293+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BID' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.280+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BRESP' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.276+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_BREADY' to 0." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.272+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BREADY' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.267+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_BVALID' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.264+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RRESP' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.260+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RUSER' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.259+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RID' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.257+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RLAST' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.249+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RDATA' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.246+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_RREADY' to 0." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.244+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RREADY' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.242+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'dut/m_axi_gmem9_RVALID' has no fanin or fanout and is left dangling.&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.238+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Setting dangling out port 'dut/m_axi_gmem9_ARUSER' to 0." projectName="betweenness.prj" solutionName="solution1" date="2022-11-13T17:17:52.234+0800" type="Warning"/>
+      </synLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

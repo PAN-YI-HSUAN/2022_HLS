@@ -1,0 +1,57 @@
+===============================================================================
+Version:    v++ v2022.1 (64-bit)
+Build:      SW Build 3524075 on 2022-04-13-17:42:45
+Copyright:  Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Created:    Sat Nov 12 01:20:16 2022
+===============================================================================
+
+-------------------------------------------------------------------------------
+Design Name:             dut
+Target Device:           xilinx:u50:gen3x16_xdma_5:202210.1
+Target Clock:            300.000000MHz
+Total number of kernels: 1
+-------------------------------------------------------------------------------
+
+Kernel Summary
+Kernel Name  Type  Target              OpenCL Library  Compute Units
+-----------  ----  ------------------  --------------  -------------
+dut          c     fpga0:OCL_REGION_0  dut             1
+
+
+-------------------------------------------------------------------------------
+OpenCL Binary:     dut
+Kernels mapped to: clc_region
+
+Timing Information (MHz)
+Compute Unit  Kernel Name  Module Name                               Target Frequency  Estimated Frequency
+------------  -----------  ----------------------------------------  ----------------  -------------------
+dut           dut          dut_Pipeline_Store_vertice_loop           300.300293        411.015198
+dut           dut          dut_Pipeline_Store_edge_loop              300.300293        411.015198
+dut           dut          dut_Pipeline_Clear_loop                   300.300293        643.086853
+dut           dut          dut_Pipeline_Queue_loop                   300.300293        344.23407
+dut           dut          dut_Pipeline_Dequeue_loop_Computing_loop  300.300293        426.985474
+dut           dut          dut_Pipeline_Output_loop                  300.300293        411.015198
+dut           dut          dut                                       300.300293        344.23407
+
+Latency Information
+Compute Unit  Kernel Name  Module Name                               Start Interval  Best (cycles)  Avg (cycles)  Worst (cycles)  Best (absolute)  Avg (absolute)  Worst (absolute)
+------------  -----------  ----------------------------------------  --------------  -------------  ------------  --------------  ---------------  --------------  ----------------
+dut           dut          dut_Pipeline_Store_vertice_loop           4               4              4             4               13.332 ns        13.332 ns       13.332 ns
+dut           dut          dut_Pipeline_Store_edge_loop              41597           41597          41597         41597           0.139 ms         0.139 ms        0.139 ms
+dut           dut          dut_Pipeline_Clear_loop                   4               4              4             4               13.332 ns        13.332 ns       13.332 ns
+dut           dut          dut_Pipeline_Queue_loop                   8 ~ 843         8              135           843             26.664 ns        0.450 us        2.810 us
+dut           dut          dut_Pipeline_Dequeue_loop_Computing_loop  626             626            626           626             2.086 us         2.086 us        2.086 us
+dut           dut          dut_Pipeline_Output_loop                  4               4              4             4               13.332 ns        13.332 ns       13.332 ns
+dut           dut          dut                                       42328 ~ 44642   42327          42454         44641           0.141 ms         0.141 ms        0.149 ms
+
+Area Information
+Compute Unit  Kernel Name  Module Name                               FF     LUT    DSP  BRAM  URAM
+------------  -----------  ----------------------------------------  -----  -----  ---  ----  ----
+dut           dut          dut_Pipeline_Store_vertice_loop           7      108    0    0     0
+dut           dut          dut_Pipeline_Store_edge_loop              72     109    0    0     0
+dut           dut          dut_Pipeline_Clear_loop                   4      3137   0    0     0
+dut           dut          dut_Pipeline_Queue_loop                   7848   81154  0    0     0
+dut           dut          dut_Pipeline_Dequeue_loop_Computing_loop  524    2102   0    0     0
+dut           dut          dut_Pipeline_Output_loop                  38     120    0    0     0
+dut           dut          dut                                       12558  92510  0    8     0
+-------------------------------------------------------------------------------
