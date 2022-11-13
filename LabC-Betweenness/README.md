@@ -1,9 +1,13 @@
 ## Notion
-### After run HW, please run the command below 2~3 times for final score, thanks!!
+- First run HW with the command below.
+```
+make run TARGET=hw DEVICE=xilinx_u50_gen3x16_xdma_5_202210_1
+```
+- After run HW, please run the command below 2~3 times to get final score, thanks!!
 ```
 sh ./testbench_hw.sh
 ```
-
+- Besides, there are some operation records in image files, feel free to check with your test result.
 ## Repository Tree
 ```
 .
