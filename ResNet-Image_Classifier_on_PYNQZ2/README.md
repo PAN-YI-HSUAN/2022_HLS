@@ -25,7 +25,7 @@ After try and error, we find that ResNet8 meet our initial goal the most.
 - impl_result: after-training onnx files and synthesized vivado projects are here.
 - src: resnet training code and finn tranform jupyter notebook are here.
 ## Build step
-ResNet:  
+- ResNet:  
 Please install python package in requirement.txt file, then simply run ResNet_training.py.
-FINN:
+- FINN:
 Please refer to web https://github.com/bol-edu/course-lab_finn to build the finn environment. Then refer to src/ResNet_finn.ipynb to do finn transform.
